@@ -1,0 +1,7 @@
+$ ~/llm/llama-vulkan/b11747/llama-b11747/llama-server --help 2>&1 | grep -A2 -E '^-fit(t)?, '
+-fit,  --fit [on|off]                   whether to adjust unset arguments to fit in device memory ('on' or
+                                        'off', default: 'on')
+                                        (env: LLAMA_ARG_FIT)
+-fitt, --fit-target MiB0,MiB1,MiB2,...
+                                        target margin per device for --fit, comma-separated list of values,
+                                        single value is broadcast across all devices, default: 1024

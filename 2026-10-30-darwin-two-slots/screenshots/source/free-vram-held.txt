@@ -1,0 +1,2 @@
+$ grep -h drm-resident-vram0 /proc/2802/fdinfo/* | awk '{s+=$2} END {printf "darwin-llm (pid 2802) resident VRAM: %.0f MiB\n", s/1024}'
+darwin-llm (pid 2802) resident VRAM: 9145 MiB

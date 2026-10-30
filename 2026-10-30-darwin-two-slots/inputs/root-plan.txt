@@ -1,0 +1,13 @@
+The power limit and application clocks can only be changed as root. They reset at reboot. Before each run, wait for the card to idle at 44–47 °C, then send one request from cool; finish with one 10-minute sustained run at 125 W.
+
+```bash
+sudo nvidia-smi -i 0 -pm 1              # keep settings while testing
+sudo nvidia-smi -i 0 -pl 175            # run 1: power cap
+sudo nvidia-smi -i 0 -pl 125            # run 2: lowest cap
+sudo nvidia-smi -i 0 -pl 250            # back to the default cap
+sudo nvidia-smi -i 0 -ac 715,1037       # run 3: clock cap (on Pascal this also turns boost off)
+sudo nvidia-smi -i 0 -rac               # undo the clock cap; -ac 715,1189 would leave boost off
+sudo nvidia-smi -i 0 -pm 0
+```
+
+Expected: no change to the throttled steady state, possibly less energy per token in bursts. The deciding numbers are energy per token and sustained tokens per second.

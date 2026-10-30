@@ -1,0 +1,7 @@
+- The root cause of the slow Vulkan prompts that Pascal owners have reported: the driver's "accelerated" flag on a GPU without DP4A, and llama.cpp's choice of the int8 path because of it.
+- That LM Studio's 2.17.0 Linux Vulkan runtime ships without int8 kernels (0 against 476 in upstream b11988).
+- The R580 clock-offset range on a P100 (0 to 0), measured through NVML.
+- N-gram speculation and parallel-slot results on a P100, and the b11988 speculation regression.
+- Energy per token cool against throttled on a P100.
+
+The prompt-speed collapse itself confirms an earlier report from TheTriumphantFox on two P100s under Ollama: https://github.com/TheTriumphantFox/p100-model-tests

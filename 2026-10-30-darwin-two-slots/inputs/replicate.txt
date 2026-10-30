@@ -1,0 +1,25 @@
+The scripts were written for one machine; set the paths at the top of each before running.
+
+1. **Probe the driver (read-only).**
+
+   ```bash
+   nvidia-smi -q
+   python3 -I scripts/nvml_probe.py
+   vulkaninfo | grep -E 'deviceName|driverInfo|shaderFloat16 |integerDotProduct4x8BitPacked'
+   ```
+
+2. **Measure sustained throttling.** Serve the model the way kala does, then run ten requests back to back while sampling the GPU twice a second:
+
+   ```bash
+   llama-server -m Qwen2.5-14B-Instruct-Q4_K_S.gguf --device Vulkan0 -ngl 999 --jinja -c 8192 --parallel 1 \
+     -t 8 -b 1024 -ub 512 --port 1234
+   bash scripts/run_live14b.sh mytag 10 512
+   python3 -I scripts/analyze.py tele-mytag.csv load-mytag.jsonl
+   python3 -I scripts/thermal_fit.py tele-mytag.csv
+   ```
+
+3. **Check for the int8 trap.** Run any llama.cpp Vulkan build twice on the same prompt, once with `GGML_VK_DISABLE_INTEGER_DOT_PRODUCT=1`, and compare the `prompt eval time` lines in the server log. `strings libggml-vulkan.so | grep -cE '^(matmul|mul_mat_vec)_[a-z0-9_]+_q8_1'` shows whether a build has the int8 kernels at all.
+
+4. **Compare engine settings.** `scripts/run_flags.sh` (flash attention, batch, FP16) and `scripts/run_layer2.sh` (speculation modes, parallel slots) use a small stand-in model on a second port. `scripts/run_14b_window.sh lms|up` runs the 14B tests; it stops and restarts a systemd user service called `llama-server`, so adapt it first. Every configuration waits for the GPU to cool below 55 °C and runs a burst short enough to finish before the throttle.
+
+5. **Re-render the screenshots** from their source text: `node ../tools/render-terminal.mjs OUT.png "Title" screenshots/source/NAME.txt`.

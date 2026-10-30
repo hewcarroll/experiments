@@ -1,0 +1,11 @@
+$ llm-batch --node darwin --jobs data/run-2026-10-30b/jobs-r1-j2.jsonl --out data/run-2026-10-30b/results-r1-j2.jsonl -j 2
+[llm-batch] darwin: 8 to run, 0 already done, 2 at a time
+[llm-batch] results: exit 0 in 8.54s
+[llm-batch] whats-new: exit 0 in 15.3s
+[llm-batch] setup: exit 0 in 16.89s
+[llm-batch] replicate: exit 0 in 20.06s
+[llm-batch] root-plan: exit 0 in 18.91s
+[llm-batch] limits-methods: exit 0 in 12.93s
+[llm-batch] sustained-analysis: exit 0 in 42.56s
+[llm-batch] engine-summary: exit 1 in 57.59s
+[llm-batch] done: 7/8 exit 0, 0 quote failures, 101.9s wall, 51.9 generated tok/s overall

@@ -1,0 +1,10 @@
+$ nl -ba src/intel/vulkan/anv_physical_device.c | sed -n '3147,3155p'
+  3147	      double heap_proportion = (double) heap_size / total_heaps_size;
+  3148	      VkDeviceSize available_prop = mem_available * heap_proportion;
+  3149	
+  3150	      /*
+  3151	       * Let's not incite the app to starve the system: report at most 90% of
+  3152	       * the available heap memory.
+  3153	       */
+  3154	      uint64_t heap_available = available_prop * 9 / 10;
+  3155	      heap_budget = MIN2(heap_size, heap_used + heap_available);

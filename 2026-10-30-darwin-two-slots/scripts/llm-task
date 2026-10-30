@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""Send one bounded task to a local model node and print the reply.
+
+  llm-task --node darwin  "Classify this ..."            # prompt as argument
+  llm-task --node kala --json -s "Return only JSON." < chunk.txt
+  llm-task --node darwin --quotes-from source.txt --json "..."   # verify every "quote" field is a substring
+
+Nodes: darwin = Gemma 4 12B on darwin's Arc B580 (http://127.0.0.1:1235, 24k ctx, 2 slots)
+       darwin-cpu = darwin's CPU only, GPU untouched (http://DARWIN_TAILNET_IP:1237, 1 slot): Qwen3.6-35B-A3B
+                    (64k ctx) when not gaming, Qwen3.5-4B (8k) during games; darwin-gamewatch swaps them
+       kala   = Qwen2.5-14B on kala's P100       (http://kala:1234, 8k ctx, 1 slot)
+       kala-vl = Qwen2.5-VL-3B on kala's P100   (http://kala:1235, 4k ctx; text-only via this client)
+Timings (and the model that answered) go to stderr; the reply goes to stdout. Stdlib only.
+"""
+import argparse
+import json
+import os
+import select
+import stat
+import sys
+import urllib.request
+
+NODES = {
+    "darwin": "http://127.0.0.1:1235",
+    "darwin-cpu": "http://DARWIN_TAILNET_IP:1237",
+    "kala": "http://KALA_TAILNET_IP:1234",   # tailnet IP: "kala" now resolves to its LAN address, where 1234 is closed
+    "kala-vl": "http://KALA_TAILNET_IP:1235",
+}
+
+
+def extract_json(text):
+    # kala ignores JSON mode and fences its replies; slice from the first { or [ to the matching last } or ].
+    starts = [i for i in (text.find("{"), text.find("[")) if i != -1]
+    if not starts:
+        raise ValueError("no JSON object in reply")
+    start = min(starts)
+    end = text.rfind("}" if text[start] == "{" else "]")
+    return json.loads(text[start:end + 1])
+
+
+def read_stdin(block):
+    # A redirected file or /dev/null is always safe to read. An open pipe may never close (agent shells),
+    # so when a prompt was given, only read it if data shows up within a second.
+    if sys.stdin.isatty():
+        return ""
+    mode = os.fstat(sys.stdin.fileno()).st_mode
+    if block or stat.S_ISREG(mode) or stat.S_ISCHR(mode):
+        return sys.stdin.read()
+    ready, _, _ = select.select([sys.stdin], [], [], 1.0)
+    return sys.stdin.read() if ready else ""
+
+
+def find_quotes(obj):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k in ("quote", "quotes", "evidence") and isinstance(v, str):
+                yield v
+            elif k in ("quotes", "evidence") and isinstance(v, list):
+                yield from (q for q in v if isinstance(q, str))
+            else:
+                yield from find_quotes(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from find_quotes(v)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("prompt", nargs="?", help="task prompt; stdin is appended if piped")
+    ap.add_argument("--node", choices=NODES, default="darwin")
+    ap.add_argument("-s", "--system", help="system prompt")
+    ap.add_argument("--json", action="store_true", help="request JSON and parse the reply")
+    ap.add_argument("--think", action="store_true", help="enable reasoning (darwin and darwin-cpu only; slower)")
+    ap.add_argument("--max-tokens", type=int, default=1024)
+    ap.add_argument("--temperature", type=float, default=0.0)
+    ap.add_argument("--quotes-from", metavar="FILE", help="fail if any quote/evidence string is not a substring of FILE")
+    ap.add_argument("--timeout", type=int, default=600)
+    args = ap.parse_args()
+
+    parts = [args.prompt] if args.prompt else []
+    piped = read_stdin(block=not args.prompt)
+    if piped:
+        parts.append(piped)
+    if not parts:
+        ap.error("no prompt given")
+
+    messages = []
+    if args.system:
+        messages.append({"role": "system", "content": args.system})
+    messages.append({"role": "user", "content": "\n\n".join(parts)})
+    body = {"messages": messages, "max_tokens": args.max_tokens, "temperature": args.temperature}
+    if args.json:
+        body["response_format"] = {"type": "json_object"}
+    if args.think:
+        body["chat_template_kwargs"] = {"enable_thinking": True}
+
+    req = urllib.request.Request(
+        NODES[args.node] + "/v1/chat/completions",
+        data=json.dumps(body).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=args.timeout) as r:
+        d = json.load(r)
+
+    choice = d["choices"][0]
+    content = choice["message"].get("content") or ""
+    t = d.get("timings", {})
+    print(
+        f"[{args.node}] {d.get('model', '?')}: prompt {t.get('prompt_n', '?')} tok @ {t.get('prompt_per_second', 0):.0f}/s, "
+        f"gen {t.get('predicted_n', '?')} tok @ {t.get('predicted_per_second', 0):.1f}/s, "
+        f"finish={choice.get('finish_reason')}",
+        file=sys.stderr,
+    )
+    if not content.strip():
+        sys.exit(f"[{args.node}] empty reply (context overflow or max_tokens spent on reasoning?)")
+
+    if not args.json:
+        print(content)
+        return
+
+    obj = extract_json(content)
+    if args.quotes_from:
+        source = open(args.quotes_from, encoding="utf-8", errors="replace").read()
+        missing = [q for q in find_quotes(obj) if q and q not in source]
+        if missing:
+            print(json.dumps(obj, indent=2, ensure_ascii=False))
+            sys.exit(f"[{args.node}] {len(missing)} quote(s) not found in source: {missing[:3]}")
+    print(json.dumps(obj, indent=2, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()

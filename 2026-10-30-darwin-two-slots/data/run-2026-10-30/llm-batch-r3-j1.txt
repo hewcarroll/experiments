@@ -1,0 +1,10 @@
+[llm-batch] darwin: 8 to run, 0 already done, 1 at a time
+[llm-batch] results: exit 1 in 6.87s (quote check failed)
+[llm-batch] whats-new: exit 0 in 12.31s
+[llm-batch] setup: exit 0 in 13.93s
+[llm-batch] replicate: exit 0 in 16.49s
+[llm-batch] root-plan: exit 0 in 15.37s
+[llm-batch] limits-methods: exit 1 in 8.29s (quote check failed)
+[llm-batch] engine-summary: exit 1 in 23.68s
+[llm-batch] sustained-analysis: exit 1 in 24.43s
+[llm-batch] done: 4/8 exit 0, 2 quote failures, 121.4s wall, 33.7 generated tok/s overall

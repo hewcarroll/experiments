@@ -1,0 +1,6 @@
+$ nl -ba ggml/src/ggml-vulkan/ggml-vulkan.cpp | sed -n '15311,15315p'
+ 15311	            if (membudget_supported && i < budgetprops.heapUsage.size()) {
+ 15312	                // Driver may report heapBudget > heap.size so we add a safeguard here
+ 15313	                // See https://github.com/ggml-org/llama.cpp/issues/29277
+ 15314	                const vk::DeviceSize budget = std::min(budgetprops.heapBudget[i], heap.size);
+ 15315	                *free += budget > budgetprops.heapUsage[i] ? budget - budgetprops.heapUsage[i] : 0;

@@ -1,0 +1,11 @@
+$ cd ~/llm/models/gemma-4-12b-qat
+$ ~/llm/llama-vulkan/b11747/llama-b11747/llama-fit-params -m gemma-4-12b-it-qat-q4_0.gguf -np 1 -v 2>&1 | grep -E 'MiB free|projected to use|^-c ' | sed -E 's/^[0-9.]+ I //' | uniq
+llama_prepare_model_devices: using device Vulkan0 (Intel(R) Arc(tm) B580 Graphics (BMG G21)) (0000:03:00.0) - 10994 MiB free
+common_params_fit_impl: projected to use 12013 MiB of device memory vs. 10994 MiB of free device memory
+llama_prepare_model_devices: using device Vulkan0 (Intel(R) Arc(tm) B580 Graphics (BMG G21)) (0000:03:00.0) - 10994 MiB free
+-c 139008 -ngl -1
+
+$ ~/llm/llama-vulkan/b11747/llama-b11747/llama-fit-params -m gemma-4-12b-it-qat-q4_0.gguf -np 1 -c 139008 -ngl -1 --fit-print on 2>&1 | grep -E 'printing estimated|^Vulkan0|^Host' | sed -E 's/^[0-9.]+ I //'
+llama_fit_params: printing estimated memory in MiB to stdout (device, model, context, compute) ...
+Vulkan0 6637 2652 679 
+Host 787 0 167 

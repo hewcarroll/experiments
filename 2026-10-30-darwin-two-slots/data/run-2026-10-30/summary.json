@@ -1,0 +1,104 @@
+[
+ {
+  "run": "r1-j1",
+  "workers": 1,
+  "start": 1793335111.79,
+  "wall_s": 121.53,
+  "jobs": 8,
+  "exit0": 4,
+  "quote_fail": 2,
+  "gen_tokens": 4087,
+  "gen_tok_s": 33.63,
+  "gpu_pkg_joules": 13647.6,
+  "joules_per_gen_token": 3.339,
+  "server_vram_mib": [
+   9145,
+   9145
+  ]
+ },
+ {
+  "run": "r1-j2",
+  "workers": 2,
+  "start": 1793335253.33,
+  "wall_s": 76.67,
+  "jobs": 8,
+  "exit0": 4,
+  "quote_fail": 2,
+  "gen_tokens": 4087,
+  "gen_tok_s": 53.31,
+  "gpu_pkg_joules": 8939.7,
+  "joules_per_gen_token": 2.187,
+  "server_vram_mib": [
+   9145,
+   9145
+  ]
+ },
+ {
+  "run": "r2-j2",
+  "workers": 2,
+  "start": 1793335350.0,
+  "wall_s": 79.46,
+  "jobs": 8,
+  "exit0": 4,
+  "quote_fail": 2,
+  "gen_tokens": 4154,
+  "gen_tok_s": 52.28,
+  "gpu_pkg_joules": 9252.9,
+  "joules_per_gen_token": 2.227,
+  "server_vram_mib": [
+   9145,
+   9145
+  ]
+ },
+ {
+  "run": "r2-j1",
+  "workers": 1,
+  "start": 1793335449.47,
+  "wall_s": 123.45,
+  "jobs": 8,
+  "exit0": 4,
+  "quote_fail": 2,
+  "gen_tokens": 4169,
+  "gen_tok_s": 33.77,
+  "gpu_pkg_joules": 13898.1,
+  "joules_per_gen_token": 3.334,
+  "server_vram_mib": [
+   9145,
+   9145
+  ]
+ },
+ {
+  "run": "r3-j1",
+  "workers": 1,
+  "start": 1793335592.93,
+  "wall_s": 121.41,
+  "jobs": 8,
+  "exit0": 4,
+  "quote_fail": 2,
+  "gen_tokens": 4096,
+  "gen_tok_s": 33.74,
+  "gpu_pkg_joules": 13663.1,
+  "joules_per_gen_token": 3.336,
+  "server_vram_mib": [
+   9145,
+   9145
+  ]
+ },
+ {
+  "run": "r3-j2",
+  "workers": 2,
+  "start": 1793335734.34,
+  "wall_s": 80.43,
+  "jobs": 8,
+  "exit0": 4,
+  "quote_fail": 2,
+  "gen_tokens": 4206,
+  "gen_tok_s": 52.29,
+  "gpu_pkg_joules": 9350.8,
+  "joules_per_gen_token": 2.223,
+  "server_vram_mib": [
+   9145,
+   9145
+  ]
+ }
+]

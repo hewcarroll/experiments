@@ -1,0 +1,7 @@
+$ ./vulkaninfo 2>/dev/null | grep -E 'deviceName|driverInfo|integerDotProduct4x8BitPackedSignedAccelerated|cooperativeMatrix  |VK_NV_cooperative_matrix2|VK_KHR_shader_bfloat16' | head -6
+	deviceName        = Intel(R) Arc(tm) B580 Graphics (BMG G21)
+	driverInfo                                           = Mesa 26.1.6-1pop0~1787580452~24.04~a5619ea
+	integerDotProduct4x8BitPackedSignedAccelerated                                = true
+	VK_KHR_shader_bfloat16                        : extension revision 1
+	VK_NV_cooperative_matrix2                     : extension revision 1
+	cooperativeMatrix                   = true

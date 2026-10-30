@@ -1,0 +1,4 @@
+$ grep -n -E 'elevated privileges|vram.mappable.free|vram.unmappable.free' src/intel/dev/xe/intel_device_info.c
+115:         /* if running without elevated privileges Xe reports used == 0 */
+131:         devinfo->mem.vram.mappable.free = devinfo->mem.vram.mappable.size - region->cpu_visible_used;
+132:         devinfo->mem.vram.unmappable.free = devinfo->mem.vram.unmappable.size - (region->used - region->cpu_visible_used);

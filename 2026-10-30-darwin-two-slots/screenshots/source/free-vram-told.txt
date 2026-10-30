@@ -1,0 +1,2 @@
+$ cd /tmp && ~/llm/llama-vulkan/b11747/llama-b11747/llama-cli --list-devices 2>&1 | grep Vulkan0
+  Vulkan0: Intel(R) Arc(tm) B580 Graphics (BMG G21) (12216 MiB, 10994 MiB free)

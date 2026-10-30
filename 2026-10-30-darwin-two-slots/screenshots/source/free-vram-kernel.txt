@@ -1,0 +1,14 @@
+$ grep -n -A5 -E '@used:|@cpu_visible_used:' /usr/include/drm/xe_drm.h
+325:	 * @used: Estimate of the memory used in bytes for this region.
+326-	 *
+327-	 * Requires CAP_PERFMON or CAP_SYS_ADMIN to get reliable
+328-	 * accounting.  Without this the value here will always equal
+329-	 * zero.
+330-	 */
+--
+351:	 * @cpu_visible_used: Estimate of CPU visible memory used, in
+352-	 * bytes.
+353-	 *
+354-	 * Requires CAP_PERFMON or CAP_SYS_ADMIN to get reliable
+355-	 * accounting. Without this the value here will always equal
+356-	 * zero.  Note this is only currently tracked for
