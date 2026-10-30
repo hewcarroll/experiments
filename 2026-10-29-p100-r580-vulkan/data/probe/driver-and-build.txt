@@ -1,0 +1,107 @@
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  580.159.03  Fri Apr 24 06:16:47 UTC 2026
+GCC version:  gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+===
+backend-manifest.json
+display-data.json
+engine-protocol-server-artifacts.json
+libggml-base.so
+libggml-cpu.so
+libggml_llamacpp.so
+libggml-vulkan.so
+libllama-common.so
+libllama-common.so.0
+libllama-common.so.0.0.1
+libllama-server-impl.so
+libllama.so
+libllm_engine.so
+liblmstudio_bindings_vulkan.node
+liblmstudiocore.so
+libmtmd.so
+llama-server
+llm_engine_vulkan.node
+===
+version: 1 (5190c2e)
+built with GNU 12.3.0 for Linux x86_64
+===
+{
+  "version": "2.17.0",
+  "domains": [
+    "llm",
+    "embedding"
+  ],
+  "engine": "llama.cpp",
+  "target_libraries": [
+    {
+      "name": "llm_engine_vulkan.node",
+      "type": "llm_engine",
+      "version": "0.1.2"
+    },
+    {
+      "name": "liblmstudio_bindings_vulkan.node",
+      "type": "liblmstudio",
+      "version": "0.2.26"
+    }
+  ],
+  "platform": "linux",
+  "cpu": {
+    "architecture": "x86_64",
+    "instruction_set_extensions": [
+      "AVX2"
+    ]
+  },
+  "gpu": {
+    "framework": "Vulkan"
+  },
+  "supported_model_formats": [
+    "gguf"
+  ],
+  "manifest_version": "4",
+  "extension_type": "engine",
+  "vendor_lib_package_names": [
+    "linux-llama-vulkan-vendor-v1"
+  ],
+  "minimum_lmstudio_version": "0.4.0+15",
+  "minimum_llmster_version": "0.0.1+9",
+  "engine_protocol_server": {
+===
+llama-b11747
+===
+{
+    "file_format_version" : "1.0.1",
+    "ICD": {
+        "library_path": "libGLX_nvidia.so.0",
+        "api_version" : "1.4.312"
+    }
+}
+===
+/etc/vulkan/icd.d/:
+
+/usr/share/vulkan/icd.d/:
+asahi_icd.json
+gfxstream_vk_icd.json
+intel_hasvk_icd.json
+intel_icd.json
+lvp_icd.json
+nouveau_icd.json
+nvidia_icd.json
+radeon_icd.json
+virtio_icd.json
+===MODPARAMS
+InitializeSystemMemoryAllocations: 1
+UsePageAttributeTable: 4294967295
+EnableMSI: 1
+EnablePCIeGen3: 0
+EnableStreamMemOPs: 0
+PreserveVideoMemoryAllocations: 1
+EnableS0ixPowerManagement: 1
+S0ixPowerManagementVideoMemoryThreshold: 256
+DynamicPowerManagement: 3
+DynamicPowerManagementVideoMemoryThreshold: 200
+EnableGpuFirmware: 18
+EnableGpuFirmwareLogs: 2
+RegistryDwords: ""
+RegistryDwordsPerDevice: ""
+===MODPROBE
+options nvidia_drm modeset=1
+options nvidia NVreg_PreserveVideoMemoryAllocations=1
+options nvidia NVreg_TemporaryFilePath=/var

@@ -1,0 +1,18 @@
+{
+  "gpus_with_dp4a": {
+    "value": [
+      "GP102",
+      "GP104",
+      "GP106"
+    ],
+    "quote": "the latest Pascal GPUs (GP102, GP104, and GP106) introduce new 8-bit integer 4-element vector dot product (DP4A)"
+  },
+  "p100_fp16_rate_vs_fp32": {
+    "value": "twice the throughput",
+    "quote": "half-precision arithmetic has twice the throughput of single-precision arithmetic on P100"
+  },
+  "p100_has_dp4a": {
+    "value": false,
+    "quote": "The NVIDIA Pascal architecture introduces high-throughput FP16 arithmetic on the Tesla P100"
+  }
+}

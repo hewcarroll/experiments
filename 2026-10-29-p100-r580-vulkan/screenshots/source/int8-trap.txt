@@ -1,0 +1,3 @@
+$ grep -Ho "prompt eval time =.*374 tokens.*" srv-up_nodot.log srv-up_dot.log
+srv-up_nodot.log:prompt eval time =    2023.98 ms /   374 tokens (    5.41 ms per token,   184.78 tokens per second)
+srv-up_dot.log:prompt eval time =   20556.89 ms /   374 tokens (   54.96 ms per token,    18.19 tokens per second)

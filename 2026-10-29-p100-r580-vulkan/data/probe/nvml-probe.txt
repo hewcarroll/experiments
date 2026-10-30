@@ -1,0 +1,76 @@
+driver 580.159.03
+nvmlDeviceGetGpcClkVfOffset 0
+nvmlDeviceGetMemClkVfOffset 0
+nvmlDeviceGetGpcClkMinMaxVfOffset (0, 0)
+nvmlDeviceGetMemClkMinMaxVfOffset (0, 0)
+nvmlDeviceGetClockOffsets(GRAPHICS,P0) (0, 0, 0)
+nvmlDeviceGetClockOffsets(MEM,P0) (0, 0, 0)
+SupportedPerformanceStates ['P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0', 'P0']
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+  P0 GRAPHICS min/max (405, 1328)
+  P0 SM min/max (405, 1328)
+  P0 MEM min/max (715, 715)
+nvmlDeviceGetPerformanceModes perf=0, nvclock=405, nvclockmin=405, nvclockmax=1328, nvclockeditable=0, memclock=715, memclockmin=715, memclockmax=715, memclockeditable=0, memTransferRate=1430, memTransferRatemin=1430, memTransferRatemax=1430, memTransferRateeditable=0
+nvmlDeviceGetCurrentClockFreqs nvclock=405, nvclockmin=405, nvclockmax=1328, nvclockeditable=0, memclock=715, memclockmin=715, memclockmax=715, memclockeditable=0, memTransferRate=1430, memTransferRatemin=1430, memTransferRatemax=1430, memTransferRateeditable=0
+TemperatureThreshold SHUTDOWN 85
+TemperatureThreshold SLOWDOWN 82
+TemperatureThreshold MEM_MAX NOT_SUPPORTED
+TemperatureThreshold GPU_MAX NOT_SUPPORTED
+TemperatureThreshold ACOUSTIC_MIN NOT_SUPPORTED
+TemperatureThreshold ACOUSTIC_CURR NOT_SUPPORTED
+TemperatureThreshold ACOUSTIC_MAX NOT_SUPPORTED
+TemperatureThreshold GPS_CURR NOT_SUPPORTED
+SupportedClocksEventReasons 0x1ff GpuIdle,ApplicationsClocksSetting,SwPowerCap,HwSlowdown,SyncBoost,SwThermalSlowdown,HwThermalSlowdown,HwPowerBrakeSlowdown,DisplayClockSetting
+ViolationStatus POWER 0.9 s
+ViolationStatus THERMAL 0.0 s
+ViolationStatus SYNC_BOOST 0.0 s
+ViolationStatus BOARD_LIMIT NOT_SUPPORTED
+ViolationStatus LOW_UTILIZATION NOT_SUPPORTED
+ViolationStatus RELIABILITY NOT_SUPPORTED
+ViolationStatus TOTAL_APP_CLOCKS NOT_SUPPORTED
+ViolationStatus TOTAL_BASE_CLOCKS NOT_SUPPORTED
+APIRestriction SET_APPLICATION_CLOCKS NOT_SUPPORTED
+APIRestriction SET_AUTO_BOOSTED_CLOCKS any user
+PowerLimitConstraints W (125.0, 250.0)
+TotalEnergyConsumption NOT_SUPPORTED
+AutoBoostedClocks NOT_SUPPORTED
+EccMode current/pending (1, 1)
+MemoryBusWidth 4096
+NumGpuCores 3584
+FieldValue 82 FI_DEV_MEMORY_TEMP NOT_SUPPORTED
+FieldValue 83 FI_DEV_TOTAL_ENERGY_CONSUMPTION NOT_SUPPORTED

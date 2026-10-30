@@ -1,0 +1,10 @@
+{"label": "live14b", "i": 0, "start": 1793317228.4, "wall_s": 26.12, "prompt_n": 1719, "pp_tok_s": 243.4, "gen_n": 512, "tg_tok_s": 26.9}
+{"label": "live14b", "i": 1, "start": 1793317254.5, "wall_s": 25.92, "prompt_n": 1719, "pp_tok_s": 250.0, "gen_n": 512, "tg_tok_s": 26.9}
+{"label": "live14b", "i": 2, "start": 1793317280.5, "wall_s": 26.17, "prompt_n": 1719, "pp_tok_s": 249.6, "gen_n": 512, "tg_tok_s": 26.57}
+{"label": "live14b", "i": 3, "start": 1793317306.6, "wall_s": 42.88, "prompt_n": 1719, "pp_tok_s": 217.5, "gen_n": 512, "tg_tok_s": 14.64}
+{"label": "live14b", "i": 4, "start": 1793317349.5, "wall_s": 74.06, "prompt_n": 1719, "pp_tok_s": 131.5, "gen_n": 512, "tg_tok_s": 8.4}
+{"label": "live14b", "i": 5, "start": 1793317423.6, "wall_s": 82.38, "prompt_n": 1719, "pp_tok_s": 105.1, "gen_n": 512, "tg_tok_s": 7.75}
+{"label": "live14b", "i": 6, "start": 1793317505.9, "wall_s": 87.18, "prompt_n": 1719, "pp_tok_s": 99.6, "gen_n": 512, "tg_tok_s": 7.32}
+{"label": "live14b", "i": 7, "start": 1793317593.1, "wall_s": 90.88, "prompt_n": 1719, "pp_tok_s": 97.6, "gen_n": 512, "tg_tok_s": 6.99}
+{"label": "live14b", "i": 8, "start": 1793317684.0, "wall_s": 90.4, "prompt_n": 1719, "pp_tok_s": 101.3, "gen_n": 512, "tg_tok_s": 6.97}
+{"label": "live14b", "i": 9, "start": 1793317774.4, "wall_s": 93.75, "prompt_n": 1719, "pp_tok_s": 93.7, "gen_n": 512, "tg_tok_s": 6.79}

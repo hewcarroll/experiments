@@ -1,0 +1,70 @@
+{
+  "switches": [
+    {
+      "switch": "-pm",
+      "what_it_sets": "persistence mode",
+      "supported_on": "Linux only",
+      "requires_root": true,
+      "persists_across_reboot": false,
+      "deprecated": false,
+      "quotes": [
+        "Set the persistence mode for the target GPUs.",
+        "Requires root.",
+        "it does not persist across reboots.",
+        "Available on Linux only."
+      ]
+    },
+    {
+      "switch": "-e",
+      "what_it_sets": "ECC mode",
+      "supported_on": null,
+      "requires_root": true,
+      "persists_across_reboot": true,
+      "deprecated": false,
+      "quotes": [
+        "Set the ECC mode for the target GPUs.",
+        "Requires root.",
+        "This setting takes effect after the next reboot and is persistent."
+      ]
+    },
+    {
+      "switch": "-lgc",
+      "what_it_sets": "locked GPU clock speed",
+      "supported_on": "Volta+",
+      "requires_root": true,
+      "persists_across_reboot": null,
+      "deprecated": false,
+      "quotes": [
+        "defines closest desired locked GPU clock speed in MHz.",
+        "Supported on Volta+.",
+        "Requires root."
+      ]
+    },
+    {
+      "switch": "-ac",
+      "what_it_sets": "maximum <memory,graphics> clocks",
+      "supported_on": "Maxwell-based GeForce and from the Kepler+ family in Tesla/Quadro/Titan devices",
+      "requires_root": true,
+      "persists_across_reboot": null,
+      "deprecated": true,
+      "quotes": [
+        "This option is deprecated and will be removed in in a future CUDA release.",
+        "Specifies maximum <memory,graphics> clocks as a pair",
+        "Requires root."
+      ]
+    },
+    {
+      "switch": "-pl",
+      "what_it_sets": "maximum power limit in watts",
+      "supported_on": "supported devices from Kepler family",
+      "requires_root": true,
+      "persists_across_reboot": null,
+      "deprecated": false,
+      "quotes": [
+        "Specifies maximum power limit in watts.",
+        "Only on supported devices from Kepler family.",
+        "Requires root."
+      ]
+    }
+  ]
+}

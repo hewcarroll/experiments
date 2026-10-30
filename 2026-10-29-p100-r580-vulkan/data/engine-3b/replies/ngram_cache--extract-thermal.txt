@@ -1,0 +1,12 @@
+```json
+{
+  "max_operating_temp_c": {"value": 80, "quote": "GPU maximum operating temperature"},
+  "slowdown_temp_c": {"value": 82, "quote": "GPU slowdown temperature (50% clock slowdown)"},
+  "shutdown_temp_c": {"value": 85, "quote": "GPU shutdown temperature"},
+  "operating_ambient_range": {"value": "0 °C to 45 °C", "quote": "Operating temperature"},
+  "airflow_cfm_by_inlet_c": [{"inlet_c": "30", "cfm": "12", "quote": "Minimum CFM Requirements per Inlet Air Temperature"}],
+  "minimum_cfm_any_time_powered": {"value": "12", "quote": "Minimum airflow when input power is provided to the card"},
+  "ducting_requirement": {"value": "Fully ducted airflow through the product’s heat sink", "quote": "System Airflow Requirements"},
+  "airflow_direction": {"value": "Left-to-right or right-to-left", "quote": "Airflow Direction"}
+}
+```

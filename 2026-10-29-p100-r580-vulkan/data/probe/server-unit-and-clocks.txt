@@ -1,0 +1,111 @@
+
+==============NVSMI LOG==============
+
+Timestamp                                              : Thu Oct 29 19:26:37 2026
+Driver Version                                         : 580.159.03
+CUDA Version                                           : 13.0
+
+Attached GPUs                                          : 1
+GPU 00000000:01:00.0
+    Supported Clocks
+        Memory                                         : 715 MHz
+            Graphics                                   : 1328 MHz
+            Graphics                                   : 1316 MHz
+            Graphics                                   : 1303 MHz
+            Graphics                                   : 1290 MHz
+            Graphics                                   : 1278 MHz
+            Graphics                                   : 1265 MHz
+            Graphics                                   : 1252 MHz
+            Graphics                                   : 1240 MHz
+            Graphics                                   : 1227 MHz
+            Graphics                                   : 1215 MHz
+            Graphics                                   : 1202 MHz
+            Graphics                                   : 1189 MHz
+            Graphics                                   : 1177 MHz
+            Graphics                                   : 1164 MHz
+            Graphics                                   : 1151 MHz
+            Graphics                                   : 1139 MHz
+            Graphics                                   : 1126 MHz
+            Graphics                                   : 1113 MHz
+            Graphics                                   : 1101 MHz
+            Graphics                                   : 1088 MHz
+            Graphics                                   : 1075 MHz
+            Graphics                                   : 1063 MHz
+            Graphics                                   : 1050 MHz
+            Graphics                                   : 1037 MHz
+            Graphics                                   : 1025 MHz
+            Graphics                                   : 1012 MHz
+            Graphics                                   : 999 MHz
+            Graphics                                   : 987 MHz
+            Graphics                                   : 974 MHz
+            Graphics                                   : 961 MHz
+            Graphics                                   : 949 MHz
+            Graphics                                   : 936 MHz
+            Graphics                                   : 923 MHz
+            Graphics                                   : 911 MHz
+            Graphics                                   : 898 MHz
+            Graphics                                   : 885 MHz
+            Graphics                                   : 873 MHz
+            Graphics                                   : 860 MHz
+            Graphics                                   : 847 MHz
+            Graphics                                   : 835 MHz
+            Graphics                                   : 822 MHz
+            Graphics                                   : 810 MHz
+            Graphics                                   : 797 MHz
+            Graphics                                   : 784 MHz
+            Graphics                                   : 772 MHz
+            Graphics                                   : 759 MHz
+            Graphics                                   : 746 MHz
+            Graphics                                   : 734 MHz
+            Graphics                                   : 721 MHz
+            Graphics                                   : 708 MHz
+            Graphics                                   : 696 MHz
+            Graphics                                   : 683 MHz
+            Graphics                                   : 670 MHz
+            Graphics                                   : 658 MHz
+            Graphics                                   : 645 MHz
+            Graphics                                   : 632 MHz
+            Graphics                                   : 620 MHz
+            Graphics                                   : 607 MHz
+            Graphics                                   : 594 MHz
+            Graphics                                   : 582 MHz
+            Graphics                                   : 569 MHz
+            Graphics                                   : 556 MHz
+            Graphics                                   : 544 MHz
+
+===UNIT
+# /home/hew/.config/systemd/user/llama-server.service
+[Unit]
+Description=KALA local LLM (llama-server, Vulkan/P100)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=LD_LIBRARY_PATH=/home/hew/.lmstudio/extensions/backends/llama.cpp-linux-x86_64-vulkan-avx2-2.17.0
+Environment=VK_DRIVER_FILES=/usr/share/vulkan/icd.d/nvidia_icd.json
+Environment=VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
+ExecStart=/home/hew/.lmstudio/extensions/backends/llama.cpp-linux-x86_64-vulkan-avx2-2.17.0/llama-server -m /home/hew/.lmstudio/models/bartowski/Qwen2.5-14B-Instruct-GGUF/Qwen2.5-14B-Instruct-Q4_K_S.gguf --device Vulkan0 -ngl 999 --jinja -c 8192 --parallel 1 -t 8 -b 1024 -ub 512 --host 0.0.0.0 --port 1234
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+===STATUS
+● llama-server.service - KALA local LLM (llama-server, Vulkan/P100)
+     Loaded: loaded (/home/hew/.config/systemd/user/llama-server.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-29 02:57:23 EDT; 16h ago
+   Main PID: 3512 (llama-server)
+      Tasks: 22 (limit: 38056)
+     Memory: 8.4G (peak: 8.4G)
+        CPU: 5min 5.307s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/llama-server.service
+             └─3512 /home/hew/.lmstudio/extensions/backends/llama.cpp-linux-x86_64-vulkan-avx2-2.17.0/llama-server -m /home/hew/.lmstudio/models/bartowski/Qwen2.5-14B-Instruct-GGUF/Qwen2.5-14B-Instruct-Q4_K_S.gguf --device Vulkan0 -ngl 999 --jinja -c 8192 --parallel 1 -t 8 -b 1024 -ub 512 --host 0.0.0.0 --port 1234
+
+Oct 29 19:20:12 kala llama-server[3512]: 982.38.791.370 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.977
+Oct 29 19:20:12 kala llama-server[3512]: 982.38.791.410 I slot launch_slot_: id  0 | task 295 | processing task, is_child = 0
+===VKLOG
+Oct 29 02:57:23 kala systemd[3389]: Started llama-server.service - KALA local LLM (llama-server, Vulkan/P100).
+Oct 29 02:59:28 kala llama-server[3512]: 1.55.304.557 W llama_context: n_ctx_seq (8192) < n_ctx_train (32768) -- the full capacity of the model will not be utilized
+Oct 29 02:59:29 kala llama-server[3512]: 1.55.965.504 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 8192
+Oct 29 02:59:29 kala llama-server[3512]: 1.55.965.767 W srv          init: --cache-idle-slots requires --kv-unified, disabling

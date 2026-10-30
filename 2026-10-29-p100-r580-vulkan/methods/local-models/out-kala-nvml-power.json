@@ -1,0 +1,24 @@
+{
+  "power_limit_supported_on": {
+    "value": "Kepler &tm; or newer fully supported devices",
+    "quote": "For Kepler &tm; or newer fully supported devices."
+  },
+  "power_limit_requires_root": {
+    "value": true,
+    "quote": "Requires root/admin permissions."
+  },
+  "power_limit_persistent_across_reboot": {
+    "value": false,
+    "quote": "Limit is not persistent across reboots or driver unloads."
+  },
+  "sw_thermal_slowdown_triggers": {
+    "value": [
+      "Current GPU temperature above the GPU Max Operating Temperature",
+      "Current memory temperature above the Memory Max Operating Temperature"
+    ],
+    "quotes": [
+      "Current GPU temperature above the GPU Max Operating Temperature",
+      "Current memory temperature above the Memory Max Operating Temperature"
+    ]
+  }
+}

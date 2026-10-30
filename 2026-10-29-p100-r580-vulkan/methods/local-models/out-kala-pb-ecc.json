@@ -1,0 +1,18 @@
+{
+  "cooling_type": {
+    "value": "passive heat sink",
+    "quote": "It uses a passive heat sink for cooling, which requires system air flow to properly operate the card within its thermal limits."
+  },
+  "ecc_default": {
+    "value": "enabled",
+    "quote": "Tesla P100 PCIe boards are shipped with ECC enabled by default to protect the GPU’s memory interface and the on-board memories."
+  },
+  "ecc_capacity_or_bandwidth_overhead": {
+    "value": "no overhead",
+    "quote": "The Tesla P100 PCIe with HBM2 memory has native support for ECC and has no ECC overhead, both in memory capacity and bandwidth."
+  },
+  "boost_behaviour": {
+    "value": "dynamic clock adjustment",
+    "quote": "By adjusting the GPU clock dynamically, maximum performance is achieved within the power cap limit."
+  }
+}

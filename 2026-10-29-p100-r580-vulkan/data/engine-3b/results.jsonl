@@ -1,0 +1,52 @@
+{"label": "spec_none", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793323647.2, "wall_s": 3.46, "prompt_n": 948, "pp_tok_s": 998.0, "gen_n": 241, "tg_tok_s": 97.1, "draft_n": null, "draft_accepted": null, "sha": "323e0e7dfd69"}
+{"label": "spec_none", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.46, "gen_total": 241, "agg_tok_s": 69.67}
+{"label": "spec_none", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793323650.7, "wall_s": 5.79, "prompt_n": 703, "pp_tok_s": 865.4, "gen_n": 480, "tg_tok_s": 97.1, "draft_n": null, "draft_accepted": null, "sha": "b3400853ec39"}
+{"label": "spec_none", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 5.79, "gen_total": 480, "agg_tok_s": 82.95}
+{"label": "spec_none", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793323656.5, "wall_s": 3.58, "prompt_n": 67, "pp_tok_s": 205.4, "gen_n": 320, "tg_tok_s": 99.26, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "spec_none", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.58, "gen_total": 320, "agg_tok_s": 89.36}
+{"label": "ngram_simple", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793323664.8, "wall_s": 3.63, "prompt_n": 948, "pp_tok_s": 1001.9, "gen_n": 241, "tg_tok_s": 90.68, "draft_n": 6, "draft_accepted": 3, "sha": "323e0e7dfd69"}
+{"label": "ngram_simple", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.63, "gen_total": 241, "agg_tok_s": 66.4}
+{"label": "ngram_simple", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793323668.5, "wall_s": 5.26, "prompt_n": 703, "pp_tok_s": 866.3, "gen_n": 480, "tg_tok_s": 108.58, "draft_n": 108, "draft_accepted": 97, "sha": "b3400853ec39"}
+{"label": "ngram_simple", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 5.26, "gen_total": 480, "agg_tok_s": 91.18}
+{"label": "ngram_simple", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793323673.7, "wall_s": 3.58, "prompt_n": 67, "pp_tok_s": 205.3, "gen_n": 320, "tg_tok_s": 99.27, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "ngram_simple", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.58, "gen_total": 320, "agg_tok_s": 89.39}
+{"label": "ngram_simple_n4", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793323697.4, "wall_s": 3.31, "prompt_n": 948, "pp_tok_s": 1000.4, "gen_n": 241, "tg_tok_s": 103.12, "draft_n": 138, "draft_accepted": 79, "sha": "323e0e7dfd69"}
+{"label": "ngram_simple_n4", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.31, "gen_total": 241, "agg_tok_s": 72.82}
+{"label": "ngram_simple_n4", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793323700.7, "wall_s": 5.0, "prompt_n": 703, "pp_tok_s": 865.7, "gen_n": 480, "tg_tok_s": 115.27, "draft_n": 273, "draft_accepted": 199, "sha": "b3400853ec39"}
+{"label": "ngram_simple_n4", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 5.0, "gen_total": 480, "agg_tok_s": 96.03}
+{"label": "ngram_simple_n4", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793323705.7, "wall_s": 3.64, "prompt_n": 67, "pp_tok_s": 205.4, "gen_n": 320, "tg_tok_s": 97.49, "draft_n": 39, "draft_accepted": 13, "sha": "efdcfc95fd25"}
+{"label": "ngram_simple_n4", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.64, "gen_total": 320, "agg_tok_s": 87.95}
+{"label": "ngram_map_k", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793323829.7, "wall_s": 3.46, "prompt_n": 948, "pp_tok_s": 1001.2, "gen_n": 241, "tg_tok_s": 96.89, "draft_n": null, "draft_accepted": null, "sha": "323e0e7dfd69"}
+{"label": "ngram_map_k", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.46, "gen_total": 241, "agg_tok_s": 69.66}
+{"label": "ngram_map_k", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793323833.1, "wall_s": 5.59, "prompt_n": 703, "pp_tok_s": 864.6, "gen_n": 480, "tg_tok_s": 101.1, "draft_n": 39, "draft_accepted": 36, "sha": "b3400853ec39"}
+{"label": "ngram_map_k", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 5.59, "gen_total": 480, "agg_tok_s": 85.86}
+{"label": "ngram_map_k", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793323838.7, "wall_s": 3.58, "prompt_n": 67, "pp_tok_s": 205.3, "gen_n": 320, "tg_tok_s": 99.24, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "ngram_map_k", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.58, "gen_total": 320, "agg_tok_s": 89.44}
+{"label": "ngram_mod", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793323997.9, "wall_s": 3.46, "prompt_n": 948, "pp_tok_s": 999.0, "gen_n": 241, "tg_tok_s": 96.78, "draft_n": null, "draft_accepted": null, "sha": "323e0e7dfd69"}
+{"label": "ngram_mod", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.46, "gen_total": 241, "agg_tok_s": 69.56}
+{"label": "ngram_mod", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793324001.4, "wall_s": 5.54, "prompt_n": 703, "pp_tok_s": 865.3, "gen_n": 480, "tg_tok_s": 102.26, "draft_n": 51, "draft_accepted": 47, "sha": "b3400853ec39"}
+{"label": "ngram_mod", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 5.54, "gen_total": 480, "agg_tok_s": 86.65}
+{"label": "ngram_mod", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793324006.9, "wall_s": 3.58, "prompt_n": 67, "pp_tok_s": 205.3, "gen_n": 320, "tg_tok_s": 99.15, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "ngram_mod", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.58, "gen_total": 320, "agg_tok_s": 89.32}
+{"label": "ngram_cache", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793324161.6, "wall_s": 3.47, "prompt_n": 948, "pp_tok_s": 1000.2, "gen_n": 241, "tg_tok_s": 96.62, "draft_n": 60, "draft_accepted": 27, "sha": "323e0e7dfd69"}
+{"label": "ngram_cache", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.47, "gen_total": 241, "agg_tok_s": 69.5}
+{"label": "ngram_cache", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793324165.0, "wall_s": 6.02, "prompt_n": 703, "pp_tok_s": 865.7, "gen_n": 480, "tg_tok_s": 92.69, "draft_n": 34, "draft_accepted": 0, "sha": "b3400853ec39"}
+{"label": "ngram_cache", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 6.02, "gen_total": 480, "agg_tok_s": 79.73}
+{"label": "ngram_cache", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793324171.1, "wall_s": 3.66, "prompt_n": 67, "pp_tok_s": 205.1, "gen_n": 320, "tg_tok_s": 96.73, "draft_n": 51, "draft_accepted": 14, "sha": "efdcfc95fd25"}
+{"label": "ngram_cache", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.66, "gen_total": 320, "agg_tok_s": 87.51}
+{"label": "par4_c1", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793324326.5, "wall_s": 3.77, "prompt_n": 67, "pp_tok_s": 141.8, "gen_n": 320, "tg_tok_s": 97.66, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c1", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.77, "gen_total": 320, "agg_tok_s": 84.96}
+{"label": "par4_c2", "workload": "freewrite", "k": 0, "conc": 2, "start": 1793324370.5, "wall_s": 5.11, "prompt_n": 67, "pp_tok_s": 153.7, "gen_n": 320, "tg_tok_s": 68.99, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c2", "workload": "freewrite", "k": 1, "conc": 2, "start": 1793324370.5, "wall_s": 5.11, "prompt_n": 67, "pp_tok_s": 153.9, "gen_n": 320, "tg_tok_s": 69.0, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c2", "workload": "freewrite", "aggregate": true, "conc": 2, "span_s": 5.11, "gen_total": 640, "agg_tok_s": 125.19}
+{"label": "par4_c4", "workload": "freewrite", "k": 0, "conc": 4, "start": 1793324436.0, "wall_s": 7.97, "prompt_n": 67, "pp_tok_s": 129.2, "gen_n": 320, "tg_tok_s": 43.32, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c4", "workload": "freewrite", "k": 1, "conc": 4, "start": 1793324436.0, "wall_s": 7.97, "prompt_n": 67, "pp_tok_s": 129.1, "gen_n": 320, "tg_tok_s": 43.31, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c4", "workload": "freewrite", "k": 2, "conc": 4, "start": 1793324436.0, "wall_s": 7.97, "prompt_n": 67, "pp_tok_s": 129.0, "gen_n": 320, "tg_tok_s": 43.31, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c4", "workload": "freewrite", "k": 3, "conc": 4, "start": 1793324436.0, "wall_s": 7.97, "prompt_n": 67, "pp_tok_s": 128.9, "gen_n": 320, "tg_tok_s": 43.31, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "par4_c4", "workload": "freewrite", "aggregate": true, "conc": 4, "span_s": 7.97, "gen_total": 1280, "agg_tok_s": 160.59}
+{"label": "spec_none2", "workload": "extract-thermal", "k": 0, "conc": 1, "start": 1793324549.3, "wall_s": 3.46, "prompt_n": 948, "pp_tok_s": 1000.9, "gen_n": 241, "tg_tok_s": 96.81, "draft_n": null, "draft_accepted": null, "sha": "323e0e7dfd69"}
+{"label": "spec_none2", "workload": "extract-thermal", "aggregate": true, "conc": 1, "span_s": 3.46, "gen_total": 241, "agg_tok_s": 69.61}
+{"label": "spec_none2", "workload": "extract-smi", "k": 0, "conc": 1, "start": 1793324552.8, "wall_s": 5.8, "prompt_n": 703, "pp_tok_s": 865.8, "gen_n": 480, "tg_tok_s": 96.93, "draft_n": null, "draft_accepted": null, "sha": "b3400853ec39"}
+{"label": "spec_none2", "workload": "extract-smi", "aggregate": true, "conc": 1, "span_s": 5.8, "gen_total": 480, "agg_tok_s": 82.82}
+{"label": "spec_none2", "workload": "freewrite", "k": 0, "conc": 1, "start": 1793324558.6, "wall_s": 3.57, "prompt_n": 67, "pp_tok_s": 205.3, "gen_n": 320, "tg_tok_s": 99.55, "draft_n": null, "draft_accepted": null, "sha": "efdcfc95fd25"}
+{"label": "spec_none2", "workload": "freewrite", "aggregate": true, "conc": 1, "span_s": 3.57, "gen_total": 320, "agg_tok_s": 89.61}

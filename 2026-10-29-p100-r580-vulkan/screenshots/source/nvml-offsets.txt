@@ -1,0 +1,11 @@
+$ python3 -I /home/hew/scratch-p100-2026-10-29/nvml_probe.py | grep -E 'VfOffset|ClockOffsets|PerformanceModes|TemperatureThreshold (SHUTDOWN|SLOWDOWN|GPU_MAX)'
+nvmlDeviceGetGpcClkVfOffset 0
+nvmlDeviceGetMemClkVfOffset 0
+nvmlDeviceGetGpcClkMinMaxVfOffset (0, 0)
+nvmlDeviceGetMemClkMinMaxVfOffset (0, 0)
+nvmlDeviceGetClockOffsets(GRAPHICS,P0) (0, 0, 0)
+nvmlDeviceGetClockOffsets(MEM,P0) (0, 0, 0)
+nvmlDeviceGetPerformanceModes perf=0, nvclock=405, nvclockmin=405, nvclockmax=1328, nvclockeditable=0, memclock=715, memclockmin=715, memclockmax=715, memclockeditable=0, memTransferRate=1430, memTransferRatemin=1430, memTransferRatemax=1430, memTransferRateeditable=0
+TemperatureThreshold SHUTDOWN 85
+TemperatureThreshold SLOWDOWN 82
+TemperatureThreshold GPU_MAX NOT_SUPPORTED

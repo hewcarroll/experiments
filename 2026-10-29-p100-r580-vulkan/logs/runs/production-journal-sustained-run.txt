@@ -1,0 +1,279 @@
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.38.792.993 I srv  params_from_: Chat format: peg-native
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.38.793.071 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.977
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.38.793.094 I slot launch_slot_: id  0 | task 341 | processing task, is_child = 0
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.38.793.100 W slot update_slots: id  0 | task 341 | need to evaluate at least 1 token for each active slot (n_past = 42, task.n_tokens() = 42)
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.38.793.100 W slot update_slots: id  0 | task 341 | n_past was set to 41
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.39.013.532 I slot print_timing: id  0 | task 341 | prompt eval time =     140.31 ms /     1 tokens (  140.31 ms per token,     7.13 tokens per second)
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.39.013.543 I slot print_timing: id  0 | task 341 |        eval time =      80.09 ms /     2 tokens (   40.05 ms per token,    24.97 tokens per second)
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.39.013.545 I slot print_timing: id  0 | task 341 |       total time =     220.41 ms /     3 tokens
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.39.013.547 I slot print_timing: id  0 | task 341 |    graphs reused =        237
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.39.013.611 I slot      release: id  0 | task 341 | stop processing: n_tokens = 43, truncated = 0
+2026-10-29T19:40:12-04:00 kala llama-server[3512]: 1002.39.013.633 I srv  update_slots: all slots are idle
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.020.331 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 60240300042
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.020.333 I srv  get_availabl: updating prompt cache
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.020.347 W srv   prompt_save:  - saving prompt with length 43, total state size = 8.064 MiB (draft: 0.000 MiB)
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.026.109 I srv          load:  - looking for better prompt, base f_keep = 0.000, sim = 0.000
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.026.113 I srv        update:  - cache state: 2 prompts, 30.192 MiB (limits: 8192.000 MiB, 8192 tokens, 43684 est)
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.026.114 I srv        update:    - prompt 0x7e38e40021a0:     118 tokens, checkpoints:  0,    22.127 MiB
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.026.114 I srv        update:    - prompt 0x7e38dc018c60:      43 tokens, checkpoints:  0,     8.064 MiB
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.026.114 I srv  get_availabl: prompt cache update took 5.78 ms
+2026-10-29T19:40:28-04:00 kala llama-server[3512]: 1002.55.026.132 I slot launch_slot_: id  0 | task 344 | processing task, is_child = 0
+2026-10-29T19:40:39-04:00 kala llama-server[3512]: 1003.05.742.148 I slot print_timing: id  0 | task 344 | n_decoded =    100, tg =  27.36 t/s
+2026-10-29T19:40:42-04:00 kala llama-server[3512]: 1003.08.760.629 I slot print_timing: id  0 | task 344 | n_decoded =    181, tg =  27.12 t/s
+2026-10-29T19:40:45-04:00 kala llama-server[3512]: 1003.11.776.916 I slot print_timing: id  0 | task 344 | n_decoded =    262, tg =  27.04 t/s
+2026-10-29T19:40:48-04:00 kala llama-server[3512]: 1003.14.800.170 I slot print_timing: id  0 | task 344 | n_decoded =    343, tg =  26.98 t/s
+2026-10-29T19:40:51-04:00 kala llama-server[3512]: 1003.17.829.127 I slot print_timing: id  0 | task 344 | n_decoded =    424, tg =  26.94 t/s
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.20.859.382 I slot print_timing: id  0 | task 344 | n_decoded =    505, tg =  26.90 t/s
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.121.243 I slot print_timing: id  0 | task 344 | prompt eval time =    7061.45 ms /  1719 tokens (    4.11 ms per token,   243.43 tokens per second)
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.121.257 I slot print_timing: id  0 | task 344 |        eval time =   19033.64 ms /   512 tokens (   37.18 ms per token,    26.90 tokens per second)
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.121.260 I slot print_timing: id  0 | task 344 |       total time =   26095.08 ms /  2231 tokens
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.121.262 I slot print_timing: id  0 | task 344 |    graphs reused =        745
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.121.443 I slot      release: id  0 | task 344 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.121.474 I srv  update_slots: all slots are idle
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.131.035 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:40:54-04:00 kala llama-server[3512]: 1003.21.131.048 I slot launch_slot_: id  0 | task 858 | processing task, is_child = 0
+2026-10-29T19:41:05-04:00 kala llama-server[3512]: 1003.31.668.051 I slot print_timing: id  0 | task 858 | n_decoded =    100, tg =  27.32 t/s
+2026-10-29T19:41:08-04:00 kala llama-server[3512]: 1003.34.680.356 I slot print_timing: id  0 | task 858 | n_decoded =    181, tg =  27.12 t/s
+2026-10-29T19:41:11-04:00 kala llama-server[3512]: 1003.37.696.273 I slot print_timing: id  0 | task 858 | n_decoded =    262, tg =  27.04 t/s
+2026-10-29T19:41:14-04:00 kala llama-server[3512]: 1003.40.720.921 I slot print_timing: id  0 | task 858 | n_decoded =    343, tg =  26.98 t/s
+2026-10-29T19:41:17-04:00 kala llama-server[3512]: 1003.43.751.596 I slot print_timing: id  0 | task 858 | n_decoded =    424, tg =  26.93 t/s
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.46.781.817 I slot print_timing: id  0 | task 858 | n_decoded =    505, tg =  26.90 t/s
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.043.491 I slot print_timing: id  0 | task 858 | prompt eval time =    6876.39 ms /  1719 tokens (    4.00 ms per token,   249.99 tokens per second)
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.043.505 I slot print_timing: id  0 | task 858 |        eval time =   19036.03 ms /   512 tokens (   37.18 ms per token,    26.90 tokens per second)
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.043.508 I slot print_timing: id  0 | task 858 |       total time =   25912.42 ms /  2231 tokens
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.043.510 I slot print_timing: id  0 | task 858 |    graphs reused =       1253
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.043.689 I slot      release: id  0 | task 858 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.043.724 I srv  update_slots: all slots are idle
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.053.630 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:41:20-04:00 kala llama-server[3512]: 1003.47.053.644 I slot launch_slot_: id  0 | task 1372 | processing task, is_child = 0
+2026-10-29T19:41:31-04:00 kala llama-server[3512]: 1003.57.595.142 I slot print_timing: id  0 | task 1372 | n_decoded =    100, tg =  27.36 t/s
+2026-10-29T19:41:34-04:00 kala llama-server[3512]: 1004.00.607.545 I slot print_timing: id  0 | task 1372 | n_decoded =    181, tg =  27.15 t/s
+2026-10-29T19:41:37-04:00 kala llama-server[3512]: 1004.03.623.919 I slot print_timing: id  0 | task 1372 | n_decoded =    262, tg =  27.05 t/s
+2026-10-29T19:41:40-04:00 kala llama-server[3512]: 1004.06.648.337 I slot print_timing: id  0 | task 1372 | n_decoded =    343, tg =  26.99 t/s
+2026-10-29T19:41:43-04:00 kala llama-server[3512]: 1004.09.669.245 I slot print_timing: id  0 | task 1372 | n_decoded =    422, tg =  26.83 t/s
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.12.688.202 I slot print_timing: id  0 | task 1372 | n_decoded =    499, tg =  26.62 t/s
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.208.892 I slot print_timing: id  0 | task 1372 | prompt eval time =    6886.05 ms /  1719 tokens (    4.01 ms per token,   249.64 tokens per second)
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.208.905 I slot print_timing: id  0 | task 1372 |        eval time =   19269.17 ms /   512 tokens (   37.64 ms per token,    26.57 tokens per second)
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.208.908 I slot print_timing: id  0 | task 1372 |       total time =   26155.22 ms /  2231 tokens
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.208.910 I slot print_timing: id  0 | task 1372 |    graphs reused =       1761
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.209.094 I slot      release: id  0 | task 1372 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.209.121 I srv  update_slots: all slots are idle
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.220.466 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:41:46-04:00 kala llama-server[3512]: 1004.13.220.495 I slot launch_slot_: id  0 | task 1886 | processing task, is_child = 0
+2026-10-29T19:41:59-04:00 kala llama-server[3512]: 1004.25.723.870 I slot print_timing: id  0 | task 1886 | n_decoded =    100, tg =  21.73 t/s
+2026-10-29T19:42:02-04:00 kala llama-server[3512]: 1004.28.745.175 I slot print_timing: id  0 | task 1886 | n_decoded =    156, tg =  20.46 t/s
+2026-10-29T19:42:05-04:00 kala llama-server[3512]: 1004.31.762.530 I slot print_timing: id  0 | task 1886 | n_decoded =    212, tg =  19.92 t/s
+2026-10-29T19:42:08-04:00 kala llama-server[3512]: 1004.34.767.534 I slot print_timing: id  0 | task 1886 | n_decoded =    247, tg =  18.10 t/s
+2026-10-29T19:42:11-04:00 kala llama-server[3512]: 1004.37.795.363 I slot print_timing: id  0 | task 1886 | n_decoded =    301, tg =  18.05 t/s
+2026-10-29T19:42:14-04:00 kala llama-server[3512]: 1004.40.809.741 I slot print_timing: id  0 | task 1886 | n_decoded =    331, tg =  16.81 t/s
+2026-10-29T19:42:17-04:00 kala llama-server[3512]: 1004.43.945.941 I slot print_timing: id  0 | task 1886 | n_decoded =    369, tg =  16.17 t/s
+2026-10-29T19:42:20-04:00 kala llama-server[3512]: 1004.46.990.773 I slot print_timing: id  0 | task 1886 | n_decoded =    412, tg =  15.93 t/s
+2026-10-29T19:42:23-04:00 kala llama-server[3512]: 1004.49.992.800 I slot print_timing: id  0 | task 1886 | n_decoded =    453, tg =  15.69 t/s
+2026-10-29T19:42:26-04:00 kala llama-server[3512]: 1004.53.074.134 I slot print_timing: id  0 | task 1886 | n_decoded =    488, tg =  15.27 t/s
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.094.341 I slot print_timing: id  0 | task 1886 | prompt eval time =    7901.74 ms /  1719 tokens (    4.60 ms per token,   217.55 tokens per second)
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.094.353 I slot print_timing: id  0 | task 1886 |        eval time =   34972.08 ms /   512 tokens (   68.30 ms per token,    14.64 tokens per second)
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.094.355 I slot print_timing: id  0 | task 1886 |       total time =   42873.82 ms /  2231 tokens
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.094.356 I slot print_timing: id  0 | task 1886 |    graphs reused =       2269
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.094.491 I slot      release: id  0 | task 1886 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.094.519 I srv  update_slots: all slots are idle
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.103.404 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:42:29-04:00 kala llama-server[3512]: 1004.56.103.418 I slot launch_slot_: id  0 | task 2400 | processing task, is_child = 0
+2026-10-29T19:42:32-04:00 kala llama-server[3512]: 1004.59.428.145 I slot print_timing: id  0 | task 2400 | prompt processing, n_tokens =   1024, progress = 0.60, t =   3.32 s / 308.00 tokens per second
+2026-10-29T19:42:54-04:00 kala llama-server[3512]: 1005.21.004.761 I slot print_timing: id  0 | task 2400 | n_decoded =    100, tg =   8.46 t/s
+2026-10-29T19:42:57-04:00 kala llama-server[3512]: 1005.24.069.154 I slot print_timing: id  0 | task 2400 | n_decoded =    122, tg =   8.19 t/s
+2026-10-29T19:43:00-04:00 kala llama-server[3512]: 1005.27.200.184 I slot print_timing: id  0 | task 2400 | n_decoded =    154, tg =   8.55 t/s
+2026-10-29T19:43:03-04:00 kala llama-server[3512]: 1005.30.204.182 I slot print_timing: id  0 | task 2400 | n_decoded =    177, tg =   8.42 t/s
+2026-10-29T19:43:06-04:00 kala llama-server[3512]: 1005.33.354.056 I slot print_timing: id  0 | task 2400 | n_decoded =    210, tg =   8.69 t/s
+2026-10-29T19:43:09-04:00 kala llama-server[3512]: 1005.36.427.907 I slot print_timing: id  0 | task 2400 | n_decoded =    230, tg =   8.44 t/s
+2026-10-29T19:43:12-04:00 kala llama-server[3512]: 1005.39.553.830 I slot print_timing: id  0 | task 2400 | n_decoded =    266, tg =   8.76 t/s
+2026-10-29T19:43:16-04:00 kala llama-server[3512]: 1005.42.628.028 I slot print_timing: id  0 | task 2400 | n_decoded =    286, tg =   8.55 t/s
+2026-10-29T19:43:19-04:00 kala llama-server[3512]: 1005.45.701.690 I slot print_timing: id  0 | task 2400 | n_decoded =    306, tg =   8.38 t/s
+2026-10-29T19:43:22-04:00 kala llama-server[3512]: 1005.48.724.123 I slot print_timing: id  0 | task 2400 | n_decoded =    337, tg =   8.52 t/s
+2026-10-29T19:43:25-04:00 kala llama-server[3512]: 1005.51.820.390 I slot print_timing: id  0 | task 2400 | n_decoded =    357, tg =   8.37 t/s
+2026-10-29T19:43:28-04:00 kala llama-server[3512]: 1005.54.830.610 I slot print_timing: id  0 | task 2400 | n_decoded =    387, tg =   8.48 t/s
+2026-10-29T19:43:31-04:00 kala llama-server[3512]: 1005.57.927.232 I slot print_timing: id  0 | task 2400 | n_decoded =    407, tg =   8.35 t/s
+2026-10-29T19:43:34-04:00 kala llama-server[3512]: 1006.01.002.971 I slot print_timing: id  0 | task 2400 | n_decoded =    428, tg =   8.26 t/s
+2026-10-29T19:43:37-04:00 kala llama-server[3512]: 1006.04.078.110 I slot print_timing: id  0 | task 2400 | n_decoded =    462, tg =   8.42 t/s
+2026-10-29T19:43:40-04:00 kala llama-server[3512]: 1006.07.099.188 I slot print_timing: id  0 | task 2400 | n_decoded =    482, tg =   8.32 t/s
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.157.937 I slot print_timing: id  0 | task 2400 | prompt eval time =   13077.08 ms /  1719 tokens (    7.61 ms per token,   131.45 tokens per second)
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.157.940 I slot print_timing: id  0 | task 2400 |        eval time =   60977.43 ms /   512 tokens (  119.10 ms per token,     8.40 tokens per second)
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.157.940 I slot print_timing: id  0 | task 2400 |       total time =   74054.51 ms /  2231 tokens
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.157.941 I slot print_timing: id  0 | task 2400 |    graphs reused =       2777
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.157.973 I slot      release: id  0 | task 2400 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.157.981 I srv  update_slots: all slots are idle
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.161.011 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:43:43-04:00 kala llama-server[3512]: 1006.10.161.025 I slot launch_slot_: id  0 | task 2914 | processing task, is_child = 0
+2026-10-29T19:43:47-04:00 kala llama-server[3512]: 1006.14.486.701 I slot print_timing: id  0 | task 2914 | prompt processing, n_tokens =   1024, progress = 0.60, t =   4.33 s / 236.73 tokens per second
+2026-10-29T19:44:11-04:00 kala llama-server[3512]: 1006.38.485.678 I slot print_timing: id  0 | task 2914 | n_decoded =    100, tg =   8.35 t/s
+2026-10-29T19:44:14-04:00 kala llama-server[3512]: 1006.41.559.233 I slot print_timing: id  0 | task 2914 | n_decoded =    120, tg =   7.97 t/s
+2026-10-29T19:44:17-04:00 kala llama-server[3512]: 1006.44.563.153 I slot print_timing: id  0 | task 2914 | n_decoded =    150, tg =   8.31 t/s
+2026-10-29T19:44:21-04:00 kala llama-server[3512]: 1006.47.636.677 I slot print_timing: id  0 | task 2914 | n_decoded =    170, tg =   8.05 t/s
+2026-10-29T19:44:24-04:00 kala llama-server[3512]: 1006.50.661.839 I slot print_timing: id  0 | task 2914 | n_decoded =    195, tg =   8.07 t/s
+2026-10-29T19:44:27-04:00 kala llama-server[3512]: 1006.53.701.620 I slot print_timing: id  0 | task 2914 | n_decoded =    218, tg =   8.02 t/s
+2026-10-29T19:44:30-04:00 kala llama-server[3512]: 1006.56.774.925 I slot print_timing: id  0 | task 2914 | n_decoded =    238, tg =   7.86 t/s
+2026-10-29T19:44:33-04:00 kala llama-server[3512]: 1006.59.811.485 I slot print_timing: id  0 | task 2914 | n_decoded =    267, tg =   8.02 t/s
+2026-10-29T19:44:36-04:00 kala llama-server[3512]: 1007.02.885.704 I slot print_timing: id  0 | task 2914 | n_decoded =    287, tg =   7.89 t/s
+2026-10-29T19:44:39-04:00 kala llama-server[3512]: 1007.05.937.407 I slot print_timing: id  0 | task 2914 | n_decoded =    307, tg =   7.79 t/s
+2026-10-29T19:44:42-04:00 kala llama-server[3512]: 1007.08.958.319 I slot print_timing: id  0 | task 2914 | n_decoded =    339, tg =   7.99 t/s
+2026-10-29T19:44:45-04:00 kala llama-server[3512]: 1007.12.054.160 I slot print_timing: id  0 | task 2914 | n_decoded =    359, tg =   7.88 t/s
+2026-10-29T19:44:48-04:00 kala llama-server[3512]: 1007.15.113.040 I slot print_timing: id  0 | task 2914 | n_decoded =    385, tg =   7.92 t/s
+2026-10-29T19:44:51-04:00 kala llama-server[3512]: 1007.18.146.336 I slot print_timing: id  0 | task 2914 | n_decoded =    406, tg =   7.86 t/s
+2026-10-29T19:44:54-04:00 kala llama-server[3512]: 1007.21.242.875 I slot print_timing: id  0 | task 2914 | n_decoded =    426, tg =   7.78 t/s
+2026-10-29T19:44:57-04:00 kala llama-server[3512]: 1007.24.292.555 I slot print_timing: id  0 | task 2914 | n_decoded =    455, tg =   7.87 t/s
+2026-10-29T19:45:00-04:00 kala llama-server[3512]: 1007.27.424.858 I slot print_timing: id  0 | task 2914 | n_decoded =    479, tg =   7.86 t/s
+2026-10-29T19:45:03-04:00 kala llama-server[3512]: 1007.30.521.409 I slot print_timing: id  0 | task 2914 | n_decoded =    499, tg =   7.80 t/s
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.535.855 I slot print_timing: id  0 | task 2914 | prompt eval time =   16351.11 ms /  1719 tokens (    9.51 ms per token,   105.13 tokens per second)
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.535.858 I slot print_timing: id  0 | task 2914 |        eval time =   66023.71 ms /   512 tokens (  128.95 ms per token,     7.75 tokens per second)
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.535.859 I slot print_timing: id  0 | task 2914 |       total time =   82374.82 ms /  2231 tokens
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.535.859 I slot print_timing: id  0 | task 2914 |    graphs reused =       3285
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.535.894 I slot      release: id  0 | task 2914 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.535.902 I srv  update_slots: all slots are idle
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.538.807 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:45:05-04:00 kala llama-server[3512]: 1007.32.538.821 I slot launch_slot_: id  0 | task 3428 | processing task, is_child = 0
+2026-10-29T19:45:10-04:00 kala llama-server[3512]: 1007.37.379.496 I slot print_timing: id  0 | task 3428 | prompt processing, n_tokens =   1024, progress = 0.60, t =   4.84 s / 211.54 tokens per second
+2026-10-29T19:45:37-04:00 kala llama-server[3512]: 1008.04.034.845 I slot print_timing: id  0 | task 3428 | n_decoded =    100, tg =   7.02 t/s
+2026-10-29T19:45:40-04:00 kala llama-server[3512]: 1008.07.127.038 I slot print_timing: id  0 | task 3428 | n_decoded =    129, tg =   7.44 t/s
+2026-10-29T19:45:43-04:00 kala llama-server[3512]: 1008.10.200.196 I slot print_timing: id  0 | task 3428 | n_decoded =    149, tg =   7.30 t/s
+2026-10-29T19:45:46-04:00 kala llama-server[3512]: 1008.13.273.503 I slot print_timing: id  0 | task 3428 | n_decoded =    169, tg =   7.20 t/s
+2026-10-29T19:45:49-04:00 kala llama-server[3512]: 1008.16.336.404 I slot print_timing: id  0 | task 3428 | n_decoded =    196, tg =   7.38 t/s
+2026-10-29T19:45:52-04:00 kala llama-server[3512]: 1008.19.409.921 I slot print_timing: id  0 | task 3428 | n_decoded =    216, tg =   7.29 t/s
+2026-10-29T19:45:55-04:00 kala llama-server[3512]: 1008.22.483.682 I slot print_timing: id  0 | task 3428 | n_decoded =    236, tg =   7.22 t/s
+2026-10-29T19:45:58-04:00 kala llama-server[3512]: 1008.25.589.968 I slot print_timing: id  0 | task 3428 | n_decoded =    265, tg =   7.40 t/s
+2026-10-29T19:46:02-04:00 kala llama-server[3512]: 1008.28.663.709 I slot print_timing: id  0 | task 3428 | n_decoded =    285, tg =   7.33 t/s
+2026-10-29T19:46:05-04:00 kala llama-server[3512]: 1008.31.737.563 I slot print_timing: id  0 | task 3428 | n_decoded =    305, tg =   7.27 t/s
+2026-10-29T19:46:08-04:00 kala llama-server[3512]: 1008.34.812.859 I slot print_timing: id  0 | task 3428 | n_decoded =    325, tg =   7.22 t/s
+2026-10-29T19:46:11-04:00 kala llama-server[3512]: 1008.37.934.756 I slot print_timing: id  0 | task 3428 | n_decoded =    352, tg =   7.31 t/s
+2026-10-29T19:46:14-04:00 kala llama-server[3512]: 1008.41.030.353 I slot print_timing: id  0 | task 3428 | n_decoded =    372, tg =   7.26 t/s
+2026-10-29T19:46:17-04:00 kala llama-server[3512]: 1008.44.125.653 I slot print_timing: id  0 | task 3428 | n_decoded =    402, tg =   7.40 t/s
+2026-10-29T19:46:20-04:00 kala llama-server[3512]: 1008.47.221.809 I slot print_timing: id  0 | task 3428 | n_decoded =    422, tg =   7.35 t/s
+2026-10-29T19:46:23-04:00 kala llama-server[3512]: 1008.50.320.141 I slot print_timing: id  0 | task 3428 | n_decoded =    442, tg =   7.30 t/s
+2026-10-29T19:46:26-04:00 kala llama-server[3512]: 1008.53.416.685 I slot print_timing: id  0 | task 3428 | n_decoded =    462, tg =   7.26 t/s
+2026-10-29T19:46:29-04:00 kala llama-server[3512]: 1008.56.512.747 I slot print_timing: id  0 | task 3428 | n_decoded =    482, tg =   7.22 t/s
+2026-10-29T19:46:32-04:00 kala llama-server[3512]: 1008.59.561.453 I slot print_timing: id  0 | task 3428 | n_decoded =    511, tg =   7.32 t/s
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.716.245 I slot print_timing: id  0 | task 3428 | prompt eval time =   17253.60 ms /  1719 tokens (   10.04 ms per token,    99.63 tokens per second)
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.716.248 I slot print_timing: id  0 | task 3428 |        eval time =   69923.82 ms /   512 tokens (  136.57 ms per token,     7.32 tokens per second)
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.716.248 I slot print_timing: id  0 | task 3428 |       total time =   87177.42 ms /  2231 tokens
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.716.248 I slot print_timing: id  0 | task 3428 |    graphs reused =       3793
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.716.282 I slot      release: id  0 | task 3428 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.716.289 I srv  update_slots: all slots are idle
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.719.371 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:46:33-04:00 kala llama-server[3512]: 1008.59.719.385 I slot launch_slot_: id  0 | task 3942 | processing task, is_child = 0
+2026-10-29T19:46:38-04:00 kala llama-server[3512]: 1009.05.315.990 I slot print_timing: id  0 | task 3942 | prompt processing, n_tokens =   1024, progress = 0.60, t =   5.60 s / 182.97 tokens per second
+2026-10-29T19:47:05-04:00 kala llama-server[3512]: 1009.32.304.399 I slot print_timing: id  0 | task 3942 | n_decoded =    100, tg =   6.68 t/s
+2026-10-29T19:47:08-04:00 kala llama-server[3512]: 1009.35.429.555 I slot print_timing: id  0 | task 3942 | n_decoded =    128, tg =   7.07 t/s
+2026-10-29T19:47:11-04:00 kala llama-server[3512]: 1009.38.502.698 I slot print_timing: id  0 | task 3942 | n_decoded =    148, tg =   6.99 t/s
+2026-10-29T19:47:14-04:00 kala llama-server[3512]: 1009.41.575.934 I slot print_timing: id  0 | task 3942 | n_decoded =    168, tg =   6.93 t/s
+2026-10-29T19:47:18-04:00 kala llama-server[3512]: 1009.44.650.613 I slot print_timing: id  0 | task 3942 | n_decoded =    188, tg =   6.88 t/s
+2026-10-29T19:47:21-04:00 kala llama-server[3512]: 1009.47.723.582 I slot print_timing: id  0 | task 3942 | n_decoded =    208, tg =   6.84 t/s
+2026-10-29T19:47:24-04:00 kala llama-server[3512]: 1009.50.796.459 I slot print_timing: id  0 | task 3942 | n_decoded =    228, tg =   6.81 t/s
+2026-10-29T19:47:27-04:00 kala llama-server[3512]: 1009.53.803.325 I slot print_timing: id  0 | task 3942 | n_decoded =    250, tg =   6.85 t/s
+2026-10-29T19:47:30-04:00 kala llama-server[3512]: 1009.56.893.188 I slot print_timing: id  0 | task 3942 | n_decoded =    275, tg =   6.95 t/s
+2026-10-29T19:47:33-04:00 kala llama-server[3512]: 1009.59.966.655 I slot print_timing: id  0 | task 3942 | n_decoded =    295, tg =   6.92 t/s
+2026-10-29T19:47:36-04:00 kala llama-server[3512]: 1010.03.041.960 I slot print_timing: id  0 | task 3942 | n_decoded =    315, tg =   6.89 t/s
+2026-10-29T19:47:39-04:00 kala llama-server[3512]: 1010.06.088.686 I slot print_timing: id  0 | task 3942 | n_decoded =    341, tg =   6.99 t/s
+2026-10-29T19:47:42-04:00 kala llama-server[3512]: 1010.09.184.370 I slot print_timing: id  0 | task 3942 | n_decoded =    361, tg =   6.96 t/s
+2026-10-29T19:47:45-04:00 kala llama-server[3512]: 1010.12.197.296 I slot print_timing: id  0 | task 3942 | n_decoded =    391, tg =   7.13 t/s
+2026-10-29T19:47:48-04:00 kala llama-server[3512]: 1010.15.293.290 I slot print_timing: id  0 | task 3942 | n_decoded =    411, tg =   7.09 t/s
+2026-10-29T19:47:51-04:00 kala llama-server[3512]: 1010.18.389.321 I slot print_timing: id  0 | task 3942 | n_decoded =    431, tg =   7.06 t/s
+2026-10-29T19:47:54-04:00 kala llama-server[3512]: 1010.21.487.232 I slot print_timing: id  0 | task 3942 | n_decoded =    451, tg =   7.03 t/s
+2026-10-29T19:47:57-04:00 kala llama-server[3512]: 1010.24.583.751 I slot print_timing: id  0 | task 3942 | n_decoded =    471, tg =   7.00 t/s
+2026-10-29T19:48:01-04:00 kala llama-server[3512]: 1010.27.680.251 I slot print_timing: id  0 | task 3942 | n_decoded =    491, tg =   6.98 t/s
+2026-10-29T19:48:03-04:00 kala llama-server[3512]: 1010.30.590.969 I slot print_timing: id  0 | task 3942 | prompt eval time =   17612.42 ms /  1719 tokens (   10.25 ms per token,    97.60 tokens per second)
+2026-10-29T19:48:03-04:00 kala llama-server[3512]: 1010.30.590.983 I slot print_timing: id  0 | task 3942 |        eval time =   73259.13 ms /   512 tokens (  143.08 ms per token,     6.99 tokens per second)
+2026-10-29T19:48:03-04:00 kala llama-server[3512]: 1010.30.590.985 I slot print_timing: id  0 | task 3942 |       total time =   90871.56 ms /  2231 tokens
+2026-10-29T19:48:03-04:00 kala llama-server[3512]: 1010.30.590.987 I slot print_timing: id  0 | task 3942 |    graphs reused =       4301
+2026-10-29T19:48:03-04:00 kala llama-server[3512]: 1010.30.591.153 I slot      release: id  0 | task 3942 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:48:03-04:00 kala llama-server[3512]: 1010.30.591.183 I srv  update_slots: all slots are idle
+2026-10-29T19:48:04-04:00 kala llama-server[3512]: 1010.30.600.469 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:48:04-04:00 kala llama-server[3512]: 1010.30.600.483 I slot launch_slot_: id  0 | task 4456 | processing task, is_child = 0
+2026-10-29T19:48:07-04:00 kala llama-server[3512]: 1010.34.463.973 I slot print_timing: id  0 | task 4456 | prompt processing, n_tokens =   1024, progress = 0.60, t =   3.86 s / 265.05 tokens per second
+2026-10-29T19:48:35-04:00 kala llama-server[3512]: 1011.02.524.296 I slot print_timing: id  0 | task 4456 | n_decoded =    100, tg =   6.69 t/s
+2026-10-29T19:48:39-04:00 kala llama-server[3512]: 1011.05.598.575 I slot print_timing: id  0 | task 4456 | n_decoded =    120, tg =   6.66 t/s
+2026-10-29T19:48:42-04:00 kala llama-server[3512]: 1011.08.671.904 I slot print_timing: id  0 | task 4456 | n_decoded =    140, tg =   6.64 t/s
+2026-10-29T19:48:45-04:00 kala llama-server[3512]: 1011.11.745.394 I slot print_timing: id  0 | task 4456 | n_decoded =    160, tg =   6.62 t/s
+2026-10-29T19:48:48-04:00 kala llama-server[3512]: 1011.14.887.028 I slot print_timing: id  0 | task 4456 | n_decoded =    188, tg =   6.88 t/s
+2026-10-29T19:48:51-04:00 kala llama-server[3512]: 1011.17.959.406 I slot print_timing: id  0 | task 4456 | n_decoded =    208, tg =   6.85 t/s
+2026-10-29T19:48:54-04:00 kala llama-server[3512]: 1011.21.032.492 I slot print_timing: id  0 | task 4456 | n_decoded =    228, tg =   6.81 t/s
+2026-10-29T19:48:57-04:00 kala llama-server[3512]: 1011.24.107.741 I slot print_timing: id  0 | task 4456 | n_decoded =    248, tg =   6.79 t/s
+2026-10-29T19:49:00-04:00 kala llama-server[3512]: 1011.27.133.798 I slot print_timing: id  0 | task 4456 | n_decoded =    280, tg =   7.08 t/s
+2026-10-29T19:49:03-04:00 kala llama-server[3512]: 1011.30.207.032 I slot print_timing: id  0 | task 4456 | n_decoded =    300, tg =   7.04 t/s
+2026-10-29T19:49:06-04:00 kala llama-server[3512]: 1011.33.281.894 I slot print_timing: id  0 | task 4456 | n_decoded =    320, tg =   7.00 t/s
+2026-10-29T19:49:09-04:00 kala llama-server[3512]: 1011.36.367.173 I slot print_timing: id  0 | task 4456 | n_decoded =    340, tg =   6.97 t/s
+2026-10-29T19:49:12-04:00 kala llama-server[3512]: 1011.39.392.602 I slot print_timing: id  0 | task 4456 | n_decoded =    369, tg =   7.12 t/s
+2026-10-29T19:49:15-04:00 kala llama-server[3512]: 1011.42.488.731 I slot print_timing: id  0 | task 4456 | n_decoded =    389, tg =   7.08 t/s
+2026-10-29T19:49:18-04:00 kala llama-server[3512]: 1011.45.584.725 I slot print_timing: id  0 | task 4456 | n_decoded =    409, tg =   7.05 t/s
+2026-10-29T19:49:22-04:00 kala llama-server[3512]: 1011.48.680.829 I slot print_timing: id  0 | task 4456 | n_decoded =    429, tg =   7.02 t/s
+2026-10-29T19:49:25-04:00 kala llama-server[3512]: 1011.51.778.267 I slot print_timing: id  0 | task 4456 | n_decoded =    449, tg =   6.99 t/s
+2026-10-29T19:49:28-04:00 kala llama-server[3512]: 1011.54.874.180 I slot print_timing: id  0 | task 4456 | n_decoded =    469, tg =   6.97 t/s
+2026-10-29T19:49:31-04:00 kala llama-server[3512]: 1011.57.970.232 I slot print_timing: id  0 | task 4456 | n_decoded =    489, tg =   6.95 t/s
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.989.400 I slot print_timing: id  0 | task 4456 | prompt eval time =   16972.83 ms /  1719 tokens (    9.87 ms per token,   101.28 tokens per second)
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.989.412 I slot print_timing: id  0 | task 4456 |        eval time =   73416.06 ms /   512 tokens (  143.39 ms per token,     6.97 tokens per second)
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.989.414 I slot print_timing: id  0 | task 4456 |       total time =   90388.89 ms /  2231 tokens
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.989.416 I slot print_timing: id  0 | task 4456 |    graphs reused =       4809
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.989.593 I slot      release: id  0 | task 4456 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.989.619 I srv  update_slots: all slots are idle
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.998.250 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.771
+2026-10-29T19:49:34-04:00 kala llama-server[3512]: 1012.00.998.263 I slot launch_slot_: id  0 | task 4970 | processing task, is_child = 0
+2026-10-29T19:49:39-04:00 kala llama-server[3512]: 1012.06.085.019 I slot print_timing: id  0 | task 4970 | prompt processing, n_tokens =   1024, progress = 0.60, t =   5.09 s / 201.31 tokens per second
+2026-10-29T19:50:07-04:00 kala llama-server[3512]: 1012.34.277.070 I slot print_timing: id  0 | task 4970 | n_decoded =    100, tg =   6.70 t/s
+2026-10-29T19:50:10-04:00 kala llama-server[3512]: 1012.37.351.148 I slot print_timing: id  0 | task 4970 | n_decoded =    120, tg =   6.66 t/s
+2026-10-29T19:50:12-04:00 kala llama-server[3512]: 1012.38.800.290 I srv  params_from_: Chat format: peg-native
+2026-10-29T19:50:13-04:00 kala llama-server[3512]: 1012.40.424.215 I slot print_timing: id  0 | task 4970 | n_decoded =    140, tg =   6.64 t/s
+2026-10-29T19:50:16-04:00 kala llama-server[3512]: 1012.43.466.428 I slot print_timing: id  0 | task 4970 | n_decoded =    162, tg =   6.72 t/s
+2026-10-29T19:50:20-04:00 kala llama-server[3512]: 1012.46.610.896 I slot print_timing: id  0 | task 4970 | n_decoded =    189, tg =   6.93 t/s
+2026-10-29T19:50:23-04:00 kala llama-server[3512]: 1012.49.683.731 I slot print_timing: id  0 | task 4970 | n_decoded =    209, tg =   6.89 t/s
+2026-10-29T19:50:26-04:00 kala llama-server[3512]: 1012.52.756.822 I slot print_timing: id  0 | task 4970 | n_decoded =    229, tg =   6.85 t/s
+2026-10-29T19:50:29-04:00 kala llama-server[3512]: 1012.55.831.524 I slot print_timing: id  0 | task 4970 | n_decoded =    249, tg =   6.82 t/s
+2026-10-29T19:50:32-04:00 kala llama-server[3512]: 1012.58.904.793 I slot print_timing: id  0 | task 4970 | n_decoded =    269, tg =   6.80 t/s
+2026-10-29T19:50:35-04:00 kala llama-server[3512]: 1013.01.978.005 I slot print_timing: id  0 | task 4970 | n_decoded =    289, tg =   6.78 t/s
+2026-10-29T19:50:38-04:00 kala llama-server[3512]: 1013.05.052.633 I slot print_timing: id  0 | task 4970 | n_decoded =    309, tg =   6.76 t/s
+2026-10-29T19:50:41-04:00 kala llama-server[3512]: 1013.08.125.352 I slot print_timing: id  0 | task 4970 | n_decoded =    329, tg =   6.74 t/s
+2026-10-29T19:50:44-04:00 kala llama-server[3512]: 1013.11.220.586 I slot print_timing: id  0 | task 4970 | n_decoded =    349, tg =   6.73 t/s
+2026-10-29T19:50:47-04:00 kala llama-server[3512]: 1013.14.317.492 I slot print_timing: id  0 | task 4970 | n_decoded =    369, tg =   6.71 t/s
+2026-10-29T19:50:50-04:00 kala llama-server[3512]: 1013.17.399.371 I slot print_timing: id  0 | task 4970 | n_decoded =    400, tg =   6.89 t/s
+2026-10-29T19:50:53-04:00 kala llama-server[3512]: 1013.20.495.229 I slot print_timing: id  0 | task 4970 | n_decoded =    420, tg =   6.87 t/s
+2026-10-29T19:50:56-04:00 kala llama-server[3512]: 1013.23.592.601 I slot print_timing: id  0 | task 4970 | n_decoded =    440, tg =   6.85 t/s
+2026-10-29T19:51:00-04:00 kala llama-server[3512]: 1013.26.688.222 I slot print_timing: id  0 | task 4970 | n_decoded =    460, tg =   6.83 t/s
+2026-10-29T19:51:03-04:00 kala llama-server[3512]: 1013.29.783.916 I slot print_timing: id  0 | task 4970 | n_decoded =    480, tg =   6.81 t/s
+2026-10-29T19:51:06-04:00 kala llama-server[3512]: 1013.32.881.769 I slot print_timing: id  0 | task 4970 | n_decoded =    500, tg =   6.80 t/s
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.106 I slot print_timing: id  0 | task 4970 | prompt eval time =   18344.36 ms /  1719 tokens (   10.67 ms per token,    93.71 tokens per second)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.109 I slot print_timing: id  0 | task 4970 |        eval time =   75396.48 ms /   512 tokens (  147.26 ms per token,     6.79 tokens per second)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.110 I slot print_timing: id  0 | task 4970 |       total time =   93740.84 ms /  2231 tokens
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.110 I slot print_timing: id  0 | task 4970 |    graphs reused =       5317
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.151 I slot      release: id  0 | task 4970 | stop processing: n_tokens = 2230, truncated = 0
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.160 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 60896025582
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.161 I srv  get_availabl: updating prompt cache
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.739.232 W srv   prompt_save:  - saving prompt with length 2230, total state size = 418.152 MiB (draft: 0.000 MiB)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.912.481 I srv          load:  - looking for better prompt, base f_keep = 0.000, sim = 0.000
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.912.486 I srv          load:  - found better prompt with f_keep = 0.977, sim = 1.000
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.065 I srv        update:  - cache state: 2 prompts, 440.279 MiB (limits: 8192.000 MiB, 8192 tokens, 43687 est)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.067 I srv        update:    - prompt 0x7e38e40021a0:     118 tokens, checkpoints:  0,    22.127 MiB
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.068 I srv        update:    - prompt 0x7e38e0020130:    2230 tokens, checkpoints:  0,   418.152 MiB
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.068 I srv  get_availabl: prompt cache update took 174.91 ms
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.141 I slot launch_slot_: id  0 | task 5102 | processing task, is_child = 0
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.166 W slot update_slots: id  0 | task 5102 | need to evaluate at least 1 token for each active slot (n_past = 42, task.n_tokens() = 42)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.34.914.167 W slot update_slots: id  0 | task 5102 | n_past was set to 41
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.35.204.376 I slot print_timing: id  0 | task 5102 | prompt eval time =     145.83 ms /     1 tokens (  145.83 ms per token,     6.86 tokens per second)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.35.204.378 I slot print_timing: id  0 | task 5102 |        eval time =     144.39 ms /     2 tokens (   72.20 ms per token,    13.85 tokens per second)
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.35.204.379 I slot print_timing: id  0 | task 5102 |       total time =     290.22 ms /     3 tokens
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.35.204.379 I slot print_timing: id  0 | task 5102 |    graphs reused =       5318
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.35.204.390 I slot      release: id  0 | task 5102 | stop processing: n_tokens = 43, truncated = 0
+2026-10-29T19:51:08-04:00 kala llama-server[3512]: 1013.35.204.397 I srv  update_slots: all slots are idle
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.983.412 I srv  params_from_: Chat format: peg-native
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.983.624 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 60896490821
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.983.626 I srv  get_availabl: updating prompt cache
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.983.640 W srv   prompt_save:  - saving prompt with length 43, total state size = 8.064 MiB (draft: 0.000 MiB)
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.778 I srv          load:  - looking for better prompt, base f_keep = 0.093, sim = 0.008
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.792 I srv        update:  - cache state: 3 prompts, 448.343 MiB (limits: 8192.000 MiB, 8192 tokens, 43687 est)
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.795 I srv        update:    - prompt 0x7e38e40021a0:     118 tokens, checkpoints:  0,    22.127 MiB
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.797 I srv        update:    - prompt 0x7e38e0020130:    2230 tokens, checkpoints:  0,   418.152 MiB
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.798 I srv        update:    - prompt 0x7e38dc018c60:      43 tokens, checkpoints:  0,     8.064 MiB
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.799 I srv  get_availabl: prompt cache update took 6.17 ms
+2026-10-29T19:52:48-04:00 kala llama-server[3512]: 1015.14.989.920 I slot launch_slot_: id  0 | task 5487 | processing task, is_child = 0
+2026-10-29T19:52:54-04:00 kala llama-server[3512]: 1015.21.007.425 I slot print_timing: id  0 | task 5487 | n_decoded =    100, tg =  28.16 t/s
+2026-10-29T19:52:56-04:00 kala llama-server[3512]: 1015.22.968.209 I slot print_timing: id  0 | task 5487 | prompt eval time =    2466.61 ms /   480 tokens (    5.14 ms per token,   194.60 tokens per second)
+2026-10-29T19:52:56-04:00 kala llama-server[3512]: 1015.22.968.221 I slot print_timing: id  0 | task 5487 |        eval time =    5511.64 ms /   154 tokens (   35.79 ms per token,    27.94 tokens per second)
+2026-10-29T19:52:56-04:00 kala llama-server[3512]: 1015.22.968.223 I slot print_timing: id  0 | task 5487 |       total time =    7978.25 ms /   634 tokens
+2026-10-29T19:52:56-04:00 kala llama-server[3512]: 1015.22.968.226 I slot print_timing: id  0 | task 5487 |    graphs reused =       5469
+2026-10-29T19:52:56-04:00 kala llama-server[3512]: 1015.22.968.328 I slot      release: id  0 | task 5487 | stop processing: n_tokens = 637, truncated = 0
+2026-10-29T19:52:56-04:00 kala llama-server[3512]: 1015.22.968.351 I srv  update_slots: all slots are idle

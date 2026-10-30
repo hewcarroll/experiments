@@ -1,0 +1,71 @@
+0.00.037.965 I srv          init: using 15 threads for HTTP server
+0.00.038.026 I srv         start: binding port with default address family
+0.00.039.143 I srv  llama_server: loading model
+0.00.039.146 I srv    load_model: loading model '/home/hew/.lmstudio/models/vision/Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf'
+0.00.039.160 I common_init_result: fitting params to device memory ...
+0.00.039.160 I common_init_result: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+0.00.306.073 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.774.029 W llama_context: n_ctx_seq (4096) < n_ctx_train (128000) -- the full capacity of the model will not be utilized
+0.00.793.123 I common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+0.00.810.984 I srv    load_model: initializing slots, n_slots = 1
+0.00.828.844 W common_speculative_init: no implementations specified for speculative decoding
+0.00.828.848 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 4096
+0.00.828.882 I srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+0.00.828.884 I srv    load_model: use `--cache-ram 0` to disable the prompt cache
+0.00.828.884 I srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+0.00.828.884 I srv    load_model: context checkpoints enabled, max = 32, min spacing = 256
+0.00.828.903 W srv          init: --cache-idle-slots requires --kv-unified, disabling
+0.00.831.833 I init: chat template, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+'
+0.00.832.865 I srv          init: init: chat template, thinking = 0
+0.00.832.904 I srv  llama_server: model loaded
+0.00.832.906 I srv  llama_server: server is listening on http://127.0.0.1:18081
+0.00.832.910 I srv  update_slots: all slots are idle
+2.06.604.589 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+2.06.604.592 I srv  get_availabl: updating prompt cache
+2.06.604.594 I srv          load:  - looking for better prompt, base f_keep = -1.000, sim = 0.000
+2.06.604.596 I srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 4096 tokens, 8589934592 est)
+2.06.604.597 I srv  get_availabl: prompt cache update took 0.01 ms
+2.06.604.619 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+2.08.741.603 I slot print_timing: id  0 | task 0 | prompt eval time =    1980.73 ms /  1719 tokens (    1.15 ms per token,   867.86 tokens per second)
+2.08.741.609 I slot print_timing: id  0 | task 0 |        eval time =     156.23 ms /    16 tokens (    9.76 ms per token,   102.41 tokens per second)
+2.08.741.610 I slot print_timing: id  0 | task 0 |       total time =    2136.96 ms /  1735 tokens
+2.08.741.615 I slot print_timing: id  0 | task 0 |    graphs reused =         15
+2.08.741.718 I slot      release: id  0 | task 0 | stop processing: n_tokens = 1734, truncated = 0
+2.08.741.729 I srv  update_slots: all slots are idle
+2.08.817.486 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.991
+2.08.817.509 I slot launch_slot_: id  0 | task 18 | processing task, is_child = 0
+2.11.666.333 I slot print_timing: id  0 | task 18 | n_decoded =    100, tg =  96.66 t/s
+2.11.962.234 I slot print_timing: id  0 | task 18 | prompt eval time =    1814.24 ms /  1719 tokens (    1.06 ms per token,   947.50 tokens per second)
+2.11.962.243 I slot print_timing: id  0 | task 18 |        eval time =    1330.47 ms /   128 tokens (   10.39 ms per token,    96.21 tokens per second)
+2.11.962.244 I slot print_timing: id  0 | task 18 |       total time =    3144.71 ms /  1847 tokens
+2.11.962.246 I slot print_timing: id  0 | task 18 |    graphs reused =        140
+2.11.962.366 I slot      release: id  0 | task 18 | stop processing: n_tokens = 1846, truncated = 0
+2.11.962.385 I srv  update_slots: all slots are idle
+2.11.969.789 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.931
+2.11.969.802 I slot launch_slot_: id  0 | task 148 | processing task, is_child = 0
+2.14.821.030 I slot print_timing: id  0 | task 148 | n_decoded =    100, tg =  96.53 t/s
+2.15.116.242 I slot print_timing: id  0 | task 148 | prompt eval time =    1815.24 ms /  1719 tokens (    1.06 ms per token,   946.98 tokens per second)
+2.15.116.251 I slot print_timing: id  0 | task 148 |        eval time =    1331.18 ms /   128 tokens (   10.40 ms per token,    96.16 tokens per second)
+2.15.116.253 I slot print_timing: id  0 | task 148 |       total time =    3146.42 ms /  1847 tokens
+2.15.116.254 I slot print_timing: id  0 | task 148 |    graphs reused =        265
+2.15.116.372 I slot      release: id  0 | task 148 | stop processing: n_tokens = 1846, truncated = 0
+2.15.116.401 I srv  update_slots: all slots are idle
+2.15.126.341 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 1.000 (> 0.100 thold), f_keep = 0.931
+2.15.126.354 I slot launch_slot_: id  0 | task 278 | processing task, is_child = 0
+2.17.972.399 I slot print_timing: id  0 | task 278 | n_decoded =    100, tg =  96.91 t/s
+2.18.268.054 I slot print_timing: id  0 | task 278 | prompt eval time =    1814.10 ms /  1719 tokens (    1.06 ms per token,   947.58 tokens per second)
+2.18.268.061 I slot print_timing: id  0 | task 278 |        eval time =    1327.59 ms /   128 tokens (   10.37 ms per token,    96.42 tokens per second)
+2.18.268.062 I slot print_timing: id  0 | task 278 |       total time =    3141.68 ms /  1847 tokens
+2.18.268.063 I slot print_timing: id  0 | task 278 |    graphs reused =        390
+2.18.268.156 I slot      release: id  0 | task 278 | stop processing: n_tokens = 1846, truncated = 0
+2.18.268.169 I srv  update_slots: all slots are idle
+2.18.278.059 I srv    operator(): operator(): cleaning up before exit...

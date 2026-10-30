@@ -1,0 +1,3 @@
+$ nvidia-smi --query-gpu=name,driver_version,temperature.gpu,clocks.sm,power.draw,clocks_event_reasons.active --format=csv
+name, driver_version, temperature.gpu, clocks.current.sm [MHz], power.draw [W], clocks_event_reasons.active
+Tesla P100-PCIE-16GB, 580.159.03, 79, 1252 MHz, 149.30 W, 0x0000000000000020

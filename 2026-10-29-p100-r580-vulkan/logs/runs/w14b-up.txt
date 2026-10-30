@@ -1,0 +1,7 @@
+window up: stopping production 22:01:54
+up_nodot start 22:07:15 at 55 C
+up_dot start 22:15:19 at 54 C
+up_nodot_spec start 22:21:23 at 55 C
+window up done 22:22:16
+production: active, health {"status":"ok"} 22:22:19
+logger stopped

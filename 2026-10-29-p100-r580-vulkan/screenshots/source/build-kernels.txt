@@ -1,0 +1,7 @@
+$ for lib in /home/hew/.lmstudio/extensions/backends/llama.cpp-linux-x86_64-vulkan-avx2-2.17.0/libggml-vulkan.so /home/hew/scratch-p100-2026-10-29/b11988/llama-b11988/libggml-vulkan.so; do echo "$lib"; echo -n '  int8 (q8_1) matmul shaders: '; strings "$lib" | grep -cE '^(matmul|mul_mat_vec)_[a-z0-9_]+_q8_1'; echo -n '  GGML_VK_DISABLE_INTEGER_DOT_PRODUCT switch: '; strings "$lib" | grep -c GGML_VK_DISABLE_INTEGER_DOT_PRODUCT; done
+/home/hew/.lmstudio/extensions/backends/llama.cpp-linux-x86_64-vulkan-avx2-2.17.0/libggml-vulkan.so
+  int8 (q8_1) matmul shaders: 0
+  GGML_VK_DISABLE_INTEGER_DOT_PRODUCT switch: 0
+/home/hew/scratch-p100-2026-10-29/b11988/llama-b11988/libggml-vulkan.so
+  int8 (q8_1) matmul shaders: 476
+  GGML_VK_DISABLE_INTEGER_DOT_PRODUCT switch: 1

@@ -1,0 +1,38 @@
+{
+  "functions": [
+    {
+      "function": "nvmlDeviceSetApplicationsClocks",
+      "what_it_sets": "clocks that applications will lock to",
+      "supported_on": "Kepler &tm; or newer non-GeForce fully supported devices and Maxwell or newer GeForce devices",
+      "requires_root": true,
+      "survives_reboot": false,
+      "quotes": [
+        "Sets the clocks that compute and graphics applications will be running at.",
+        "Requires root/admin permissions.",
+        "After system reboot or driver reload applications clocks go back to their default value."
+      ]
+    },
+    {
+      "function": "nvmlDeviceSetGpuLockedClocks",
+      "what_it_sets": "clocks that the device will lock to",
+      "supported_on": "Volta &tm; or newer fully supported devices",
+      "requires_root": true,
+      "survives_reboot": false,
+      "quotes": [
+        "Sets the clocks that the device will be running at to the value in the range of minGpuClockMHz to maxGpuClockMHz.",
+        "Requires root/admin permissions.",
+        "After system reboot or driver reload applications clocks go back to their default value."
+      ]
+    },
+    {
+      "function": "nvmlDeviceSetGpcClkVfOffset",
+      "what_it_sets": "the GPCCLK VF offset value",
+      "supported_on": null,
+      "requires_root": null,
+      "survives_reboot": null,
+      "quotes": [
+        "Set the GPCCLK VF offset value"
+      ]
+    }
+  ]
+}

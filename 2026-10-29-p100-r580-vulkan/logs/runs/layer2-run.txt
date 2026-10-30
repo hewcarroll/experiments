@@ -1,0 +1,13 @@
+spec_none start 21:27:23
+ngram_simple start 21:27:41
+ngram_simple_n4 start 21:28:13
+ngram_map_k start 21:30:25
+ngram_mod start 21:33:14
+ngram_cache start 21:35:57
+par4 conc=1 start 21:38:46
+par4 conc=2 start 21:39:30
+par4 conc=4 start 21:40:35
+spec_none2 start 21:42:25
+done 21:42:42
+test server stopped
+52 /home/hew/scratch-p100-2026-10-29/layer2/results.jsonl

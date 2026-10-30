@@ -1,0 +1,8 @@
+[
+ {
+  "name": "freewrite",
+  "max_tokens": 320,
+  "system": "You are a concise technical writer.",
+  "user": "In about 250 words, explain to a homelab owner why a passively cooled datacenter GPU needs air forced lengthwise through its heatsink, and what goes wrong when fans blow onto the card's cover instead."
+ }
+]

@@ -1,0 +1,42 @@
+{
+  "hardware": {
+    "value": "dual Tesla P100",
+    "quote": "Qwen3.8 27B Q4_K_M tuning for dual Tesla P100"
+  },
+  "backend": {
+    "value": "Ollama 0.34.0 Vulkan",
+    "quote": "Backend: Ollama 0.34.0 Vulkan, both 16 GB P100s"
+  },
+  "rows": [
+    {
+      "configuration": "Ollama defaults (`num_batch 512`)",
+      "prompt_tok_s": 11.71,
+      "generation_tok_s": 11.09,
+      "quote": "| Ollama defaults (`num_batch 512`) | 11.71 | 11.09 |"
+    },
+    {
+      "configuration": "P100 Vulkan flags (`num_batch 512`)",
+      "prompt_tok_s": 139.28,
+      "generation_tok_s": 14.79,
+      "quote": "| P100 Vulkan flags (`num_batch 512`) | 139.28 | 14.79 |"
+    },
+    {
+      "configuration": "Final P100 tuning (`num_batch 256`)",
+      "prompt_tok_s": 164.01,
+      "generation_tok_s": 14.82,
+      "quote": "| **Final P100 tuning (`num_batch 256`)** | **164.01** | **14.82** |"
+    }
+  ],
+  "why_int_dot_disabled": {
+    "value": "llama.cpp's default integer dot-product path makes Qwen3.8 prompt processing extremely slow",
+    "quote": "llama.cpp's default integer dot-product path makes Qwen3.8 prompt processing extremely slow."
+  },
+  "why_mmvq_disabled": {
+    "value": "Disabling MMVQ improves dense Q4 token decoding",
+    "quote": "Disabling MMVQ improves dense Q4 token decoding."
+  },
+  "gpu_temps": {
+    "value": "43–44°C",
+    "quote": "with both GPUs at 43–44°C and zero volatile uncorrected ECC errors."
+  }
+}

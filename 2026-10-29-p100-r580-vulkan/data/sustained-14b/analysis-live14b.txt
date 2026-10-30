@@ -1,0 +1,15 @@
+IDLE before : n=40 temp 44-45C sm 405/405/1189 MHz(min/med/max) power avg 31 W max 89 W util avg 2% reasons {'idle': 40}
+req pp tok/s tg tok/s | prompt phase                     | generation phase
+  0    243.4     26.9 |   7.1s 0.57 J/tok |  19.0s 6.69 J/tok (P_tw 180 W, check 6.69) | request 4401 J :: n=38 temp 54-62C sm 1328/1328/1328 MHz(min/med/max) power avg 180 W max 188 W util avg 96% reasons {'none': 38}
+  1    250.0     26.9 |   6.9s 0.66 J/tok |  19.0s 6.93 J/tok (P_tw 187 W, check 6.93) | request 4680 J :: n=37 temp 64-72C sm 1328/1328/1328 MHz(min/med/max) power avg 187 W max 196 W util avg 95% reasons {'none': 37}
+  2    249.6    26.57 |   6.9s 0.67 J/tok |  19.3s 6.99 J/tok (P_tw 186 W, check 6.99) | request 4737 J :: n=39 temp 74-80C sm 1139/1328/1328 MHz(min/med/max) power avg 184 W max 203 W util avg 96% reasons {'none': 27, 'idle': 9, 'sw-thermal': 3}
+  3    217.5    14.64 |   7.9s 0.56 J/tok |  35.0s 6.62 J/tok (P_tw 97 W, check 6.62) | request 4356 J :: n=69 temp 78-80C sm 405/632/1037 MHz(min/med/max) power avg 97 W max 132 W util avg 98% reasons {'idle': 37, 'sw-thermal': 32}
+  4    131.5      8.4 |  13.1s 0.60 J/tok |  61.0s 8.88 J/tok (P_tw 75 W, check 8.88) | request 5584 J :: n=119 temp 78-80C sm 405/405/860 MHz(min/med/max) power avg 75 W max 119 W util avg 100% reasons {'sw-thermal': 97, 'idle': 22}
+  5    105.1     7.75 |  16.4s 0.72 J/tok |  66.1s 9.28 J/tok (P_tw 72 W, check 9.28) | request 5995 J :: n=129 temp 78-80C sm 405/405/797 MHz(min/med/max) power avg 72 W max 109 W util avg 100% reasons {'sw-thermal': 117, 'idle': 12}
+  6     99.6     7.32 |  17.3s 0.73 J/tok |  69.9s 9.58 J/tok (P_tw 70 W, check 9.58) | request 6161 J :: n=137 temp 78-80C sm 405/405/873 MHz(min/med/max) power avg 70 W max 119 W util avg 100% reasons {'sw-thermal': 120, 'idle': 17}
+  7     97.6     6.99 |  17.6s 0.74 J/tok |  73.2s 9.92 J/tok (P_tw 69 W, check 9.92) | request 6349 J :: n=143 temp 78-80C sm 405/405/772 MHz(min/med/max) power avg 69 W max 110 W util avg 100% reasons {'sw-thermal': 134, 'idle': 9}
+  8    101.3     6.97 |  17.0s 0.73 J/tok |  73.5s 9.91 J/tok (P_tw 69 W, check 9.91) | request 6330 J :: n=143 temp 78-80C sm 405/405/860 MHz(min/med/max) power avg 69 W max 119 W util avg 100% reasons {'sw-thermal': 130, 'idle': 13}
+  9     93.7     6.79 |  18.3s 0.76 J/tok |  75.4s 10.11 J/tok (P_tw 69 W, check 10.11) | request 6485 J :: n=148 temp 78-80C sm 405/405/810 MHz(min/med/max) power avg 69 W max 109 W util avg 100% reasons {'sw-thermal': 139, 'idle': 9}
+LOAD overall: n=1257 temp 45-80C sm 405/405/1328 MHz(min/med/max) power avg 86 W max 203 W util avg 99% reasons {'idle': 250, 'none': 143, 'sw-thermal': 864}
+COOLDOWN    : n=119 temp 72-78C sm 405/405/493 MHz(min/med/max) power avg 40 W max 69 W util avg 1% reasons {'sw-thermal': 1, 'idle': 118}
+cooldown temps every 10 s: [78, 77, 76, 75, 74, 73]

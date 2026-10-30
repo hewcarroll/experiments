@@ -1,0 +1,33 @@
+cool at 54C 20:00:58
+base start 20:00:58
+cool at 54C 20:03:01
+fa_on start 20:03:01
+cool at 54C 20:05:05
+fa_off start 20:05:05
+cool at 54C 20:06:55
+ub256 start 20:06:55
+cool at 54C 20:09:06
+no_f16 start 20:09:06
+cool at 54C 20:11:31
+base2 start 20:11:31
+done 20:11:43
+  41091 nvidia-smi --query-gpu=timestamp,temperature.gpu,clocks.sm,clocks.mem,power.draw,clocks_event_reasons.active,utilization.gpu,utilization.memory,pstate --format=csv,noheader,nounits -lms 500
+test server stopped
+{"label": "base", "i": 0, "start": 1793318460.5, "wall_s": 3.16, "prompt_n": 1719, "pp_tok_s": 947.4, "gen_n": 128, "tg_tok_s": 96.16}
+{"label": "base", "i": 1, "start": 1793318463.7, "wall_s": 3.15, "prompt_n": 1719, "pp_tok_s": 946.8, "gen_n": 128, "tg_tok_s": 96.21}
+{"label": "base", "i": 2, "start": 1793318466.8, "wall_s": 3.15, "prompt_n": 1719, "pp_tok_s": 947.1, "gen_n": 128, "tg_tok_s": 96.32}
+{"label": "fa_on", "i": 0, "start": 1793318583.9, "wall_s": 3.17, "prompt_n": 1719, "pp_tok_s": 947.4, "gen_n": 128, "tg_tok_s": 95.65}
+{"label": "fa_on", "i": 1, "start": 1793318587.0, "wall_s": 3.15, "prompt_n": 1719, "pp_tok_s": 945.3, "gen_n": 128, "tg_tok_s": 96.75}
+{"label": "fa_on", "i": 2, "start": 1793318590.2, "wall_s": 3.14, "prompt_n": 1719, "pp_tok_s": 946.4, "gen_n": 128, "tg_tok_s": 96.88}
+{"label": "fa_off", "i": 0, "start": 1793318709.0, "wall_s": 3.37, "prompt_n": 1719, "pp_tok_s": 902.4, "gen_n": 128, "tg_tok_s": 88.18}
+{"label": "fa_off", "i": 1, "start": 1793318712.4, "wall_s": 3.36, "prompt_n": 1719, "pp_tok_s": 901.7, "gen_n": 128, "tg_tok_s": 88.36}
+{"label": "fa_off", "i": 2, "start": 1793318715.7, "wall_s": 3.36, "prompt_n": 1719, "pp_tok_s": 902.7, "gen_n": 128, "tg_tok_s": 88.14}
+{"label": "ub256", "i": 0, "start": 1793318818.5, "wall_s": 3.8, "prompt_n": 1719, "pp_tok_s": 701.4, "gen_n": 128, "tg_tok_s": 96.33}
+{"label": "ub256", "i": 1, "start": 1793318822.3, "wall_s": 3.78, "prompt_n": 1719, "pp_tok_s": 701.6, "gen_n": 128, "tg_tok_s": 96.48}
+{"label": "ub256", "i": 2, "start": 1793318826.1, "wall_s": 3.78, "prompt_n": 1719, "pp_tok_s": 700.2, "gen_n": 128, "tg_tok_s": 96.85}
+{"label": "no_f16", "i": 0, "start": 1793318951.4, "wall_s": 4.6, "prompt_n": 1719, "pp_tok_s": 529.9, "gen_n": 128, "tg_tok_s": 95.88}
+{"label": "no_f16", "i": 1, "start": 1793318956.0, "wall_s": 4.58, "prompt_n": 1719, "pp_tok_s": 529.3, "gen_n": 128, "tg_tok_s": 96.46}
+{"label": "no_f16", "i": 2, "start": 1793318960.6, "wall_s": 4.59, "prompt_n": 1719, "pp_tok_s": 529.1, "gen_n": 128, "tg_tok_s": 95.81}
+{"label": "base2", "i": 0, "start": 1793319094.0, "wall_s": 3.16, "prompt_n": 1719, "pp_tok_s": 947.5, "gen_n": 128, "tg_tok_s": 96.21}
+{"label": "base2", "i": 1, "start": 1793319097.2, "wall_s": 3.15, "prompt_n": 1719, "pp_tok_s": 947.0, "gen_n": 128, "tg_tok_s": 96.16}
+{"label": "base2", "i": 2, "start": 1793319100.4, "wall_s": 3.15, "prompt_n": 1719, "pp_tok_s": 947.6, "gen_n": 128, "tg_tok_s": 96.42}

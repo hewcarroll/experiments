@@ -1,0 +1,16 @@
+{
+  "max_operating_temp_c": {"value": 80, "quote": "GPU maximum operating temperature                              80         °C"},
+  "slowdown_temp_c": {"value": 82, "quote": "GPU slowdown temperature (50% clock slowdown)                  82         °C"},
+  "shutdown_temp_c": {"value": 85, "quote": "GPU shutdown temperature                                       85         °C"},
+  "operating_ambient_range": {"value": "0 °C to 45 °C", "quote": "Operating temperature               0 °C to 45 °C"},
+  "airflow_cfm_by_inlet_c": [
+    {"inlet_c": 30, "cfm": 12, "quote": "Heat Sink Inlet Temperature (°C)             Minimum Airflow Rate (CFM)"},
+    {"inlet_c": 35, "cfm": 15, "quote": "                      35                                        15                                 Yes"},
+    {"inlet_c": 40, "cfm": 19, "quote": "                      40                                        19                                 Yes"},
+    {"inlet_c": 45, "cfm": 26, "quote": "                      45                                        26                                 Yes"},
+    {"inlet_c": 50, "cfm": 37, "quote": "                      50                                        37"}
+  ],
+  "minimum_cfm_any_time_powered": {"value": 12, "quote": "Any                                        12"},
+  "ducting_requirement": {"value": "a fully ducted airflow through the product’s heat sink", "quote": "The minimum airflow is assumed to be a fully ducted airflow through the product’s heat sink."},
+  "airflow_direction": {"value": "bidirectional", "quote": "The Tesla P100 PCIe board employs a bidirectional heat sink, which accepts airflow either left-to-right or right-to-left directions."}
+}

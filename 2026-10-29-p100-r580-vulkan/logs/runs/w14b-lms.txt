@@ -1,0 +1,7 @@
+window lms: stopping production 21:44:09
+lms_base start 21:47:31 at 54 C
+lms_spec start 21:54:24 at 54 C
+lms_par4 start 22:00:52 at 54 C
+window lms done 22:01:17
+production: active, health {"status":"ok"} 22:01:20
+logger stopped

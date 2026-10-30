@@ -1,0 +1,7 @@
+$ /home/hew/scratch-p100-2026-10-29/vt/usr/bin/vulkaninfo 2>/dev/null | grep -E 'deviceName|driverInfo|shaderFloat16 |integerDotProduct4x8BitPacked|VK_KHR_cooperative_matrix'
+	deviceName        = Tesla P100-PCIE-16GB
+	driverInfo                                           = 580.159.03
+	integerDotProduct4x8BitPackedUnsignedAccelerated                              = true
+	integerDotProduct4x8BitPackedSignedAccelerated                                = true
+	integerDotProduct4x8BitPackedMixedSignednessAccelerated                       = true
+	shaderFloat16                                      = true

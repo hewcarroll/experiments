@@ -1,0 +1,13 @@
+```json
+{
+  "switches": [
+    {"switch": "-pm", "what_it_sets": "persistence mode", "supported_on": "Linux", "requires_root": true, "persists_across_reboot": false, "deprecated": false, "quotes": ["-pm", "persistence mode"]},
+    {"switch": "-e", "what_it_sets": "ECC mode", "supported_on": "Linux", "requires_root": true, "persists_across_reboot": true, "deprecated": false, "quotes": ["-e", "ECC mode"]},
+    {"switch": "-lgc", "what_it_sets": "locked GPU clock speed", "supported_on": "Volta+", "requires_root": true, "persists_across_reboot": false, "deprecated": false, "quotes": ["-lgc", "locked GPU clock speed"]},
+    {"switch": "-ac", "what_it_sets": "application clocks", "supported_on": "Maxwell-based GeForce and from the Kepler+ family in Tesla/Quadro/Titan devices", "requires_root": true, "persists_across_reboot": false, "deprecated": true, "quotes": ["-ac", "application clocks"]},
+    {"switch": "-rac", "what_it_sets": "reset application clocks", "supported_on": "Maxwell-based GeForce and from the Kepler+ family in Tesla/Quadro/Titan devices", "requires_root": true, "persists_across_reboot": false, "deprecated": true, "quotes": ["-rac", "reset application clocks"]},
+    {"switch": "-lmcd", "what_it_sets": "lock memory clocks deferred", "supported_on": "Maxwell-based GeForce and from the Kepler+ family in Tesla/Quadro/Titan devices", "requires_root": true, "persists_across_reboot": false, "deprecated": true, "quotes": ["-lmcd", "lock memory clocks deferred"]},
+    {"switch": "-pl", "what_it_sets": "power limit", "supported_on": "Supported devices from Kepler family", "requires_root": true, "persists_across_reboot": false, "deprecated": false, "quotes": ["-pl", "power limit"]}
+  ]
+}
+```

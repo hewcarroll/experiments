@@ -1,0 +1,4 @@
+$ grep -HE 'task 30[45] \| +eval time|task 305 \| draft acceptance' srv-lms_base.log srv-lms_spec.log | sed -E 's/:[0-9.]+ I slot print_timing: id  0 \| /: /'
+srv-lms_base.log: task 304 |        eval time =   18489.09 ms /   509 tokens (   36.32 ms per token,    27.53 tokens per second)
+srv-lms_spec.log: task 305 |        eval time =   14638.85 ms /   509 tokens (   28.76 ms per token,    34.77 tokens per second)
+srv-lms_spec.log: task 305 | draft acceptance = 0.75556 (  238 accepted /   315 generated)

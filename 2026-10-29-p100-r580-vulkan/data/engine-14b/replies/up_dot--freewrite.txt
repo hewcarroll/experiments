@@ -1,0 +1,13 @@
+A passively cooled GPU in a homelab datacenter relies on natural convection and airflow to dissipate heat, but in a confined space like a server rack, additional forced air can enhance cooling efficiency. When air is forced lengthwise through the heatsink, it accelerates the removal of heat, ensuring the GPU operates within safe temperature limits and maintains optimal performance.
+
+However, if fans blow air onto the card's cover instead of directly through the heatsink, several issues arise:
+
+1. **Reduced Cooling Efficiency**: Air blowing onto the cover does not effectively remove heat from the critical components inside the heatsink. This can lead to higher temperatures, potentially causing thermal throttling or even permanent damage to the GPU.
+
+2. **Thermal Hotspots**: Without proper airflow through the heatsink, certain areas may become thermal hotspots, leading to uneven cooling and increased risk of localized overheating.
+
+3. **Increased Noise**: Fans blowing onto the cover can create turbulent airflow, leading to increased noise levels without the corresponding cooling benefits.
+
+4. **Component Stress**: Higher temperatures can increase stress on the GPU's components, potentially reducing their lifespan and reliability.
+
+To ensure optimal performance and longevity, it is crucial to direct airflow lengthwise through the heatsink, ensuring efficient heat dissipation and maintaining stable operating temperatures.

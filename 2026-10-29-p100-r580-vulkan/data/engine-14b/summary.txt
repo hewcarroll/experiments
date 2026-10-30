@@ -1,0 +1,20 @@
+config         workload          pp tok/s  gen tg tok/s draft  acc   wall  same  thermal
+lms_base       pp-probe             178.6   16    29.93  None None   2.68  yes   55->60C, 131 W avg
+lms_base       extract-thermal      227.2  509    27.53  None None  22.71  yes   60->71C, 181 W avg
+lms_base       freewrite             85.8  284    28.26  None None  10.96  yes   71->75C, 185 W avg
+lms_spec       pp-probe             181.6   16    29.84  None None   2.62  yes   57->61C, 152 W avg
+lms_spec       extract-thermal      227.1  509    34.77   315  238  18.87  yes   61->70C, 182 W avg
+lms_spec       freewrite             85.7  284    27.82    18    3  11.11  yes   68->74C, 187 W avg
+lms_par4       freewrite             31.4  292    13.55  None None  24.75  NO    55->73C, 189 W avg
+lms_par4       freewrite             66.8  284    12.23  None None  24.28  yes   55->73C, 189 W avg
+lms_par4       freewrite             31.4  284    13.36  None None  24.46  yes   55->73C, 189 W avg
+lms_par4       freewrite             31.4  284    13.36  None None  24.46  yes   55->73C, 189 W avg
+lms_par4       freewrite                  1144                      24.75  AGGREGATE 46.23 tok/s over 4 streams
+up_nodot       pp-probe             184.8   16    27.84  None None   2.61  yes   55->60C, 130 W avg
+up_nodot       extract-thermal      216.5  509    27.32  None None  23.02  yes   60->71C, 179 W avg
+up_nodot       freewrite             80.9  292    27.95  None None  11.37  NO    70->76C, 189 W avg
+up_dot         pp-probe              18.2   16    19.52  None None  21.35  yes   55->62C, 72 W avg
+up_dot         freewrite              6.4  263    19.62  None None  23.84  NO    59->69C, 124 W avg
+up_nodot_spec  pp-probe             205.6   16    27.76  None None   2.38  yes   55->61C, 129 W avg
+up_nodot_spec  extract-thermal      241.0  441    13.37   896  221  36.88  NO    60->68C, 125 W avg
+up_nodot_spec  freewrite             80.8  292    22.49    96    3  13.89  NO    68->75C, 166 W avg
